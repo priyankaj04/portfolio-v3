@@ -1,0 +1,152 @@
+{
+  "meta": {
+    "name": "Priyanka J",
+    "title": "Full Stack & AI Engineer",
+    "tagline": "I build things that make life a little easier — one commit at a time.",
+    "location": "Bengaluru, India",
+    "email": "priyankajagadeesha10@gmail.com",
+    "github": "https://github.com/priyankaj04",
+    "linkedin": "https://www.linkedin.com/in/priyankaj04/",
+    "availableForWork": true
+  },
+
+  "about": {
+    "bio": "Passionate, curious developer constantly looking for problems to solve. I work at the intersection of full stack engineering and AI — building systems that scale, agents that think, and products that matter.",
+    "currentFocus": ["AI / ML Engineering", "Inference Engineering", "Full Stack Systems"]
+  },
+
+  "skills": {
+    "fullstack": ["Node.js", "React", "Next.js", "PostgreSQL", "Redis", "AWS"],
+    "ai": ["RAG Applications", "AI Agents", "Fine Tuning", "Inferencing", "Context Tokenization", "LangChain", "LangGraph"],
+    "tools": ["Docker", "Flask", "Express.js", "Tailwind CSS"]
+  },
+
+  "timeline": [
+    {
+      "id": 1,
+      "year": "2020",
+      "title": "The Beginning",
+      "description": "Started BCA. Wrote my first line of code. Got hooked.",
+      "type": "education",
+      "accent": "orange"
+    },
+    {
+      "id": 2,
+      "year": "Oct 2022",
+      "title": "First Real Mission",
+      "description": "Joined Circle Health as an intern. Dove into Node.js, React, PostgreSQL — and real-world healthcare tech.",
+      "type": "work",
+      "accent": "white"
+    },
+    {
+      "id": 3,
+      "year": "2023",
+      "title": "Degree Unlocked",
+      "description": "Completed BCA. Three years of fundamentals done.",
+      "type": "education",
+      "accent": "orange"
+    },
+    {
+      "id": 4,
+      "year": "Sep 2023",
+      "title": "Founding Engineer",
+      "description": "Went full-time at Circle Health as a Founding Engineer. Bigger scope, bigger problems.",
+      "type": "work",
+      "accent": "white"
+    },
+    {
+      "id": 5,
+      "year": "2024",
+      "title": "Built a Company",
+      "description": "Co-founded Ferronyx — a robotics fleet observability platform. Flask, React, Claude API, LangChain, LangGraph. Solid engineering, big lessons.",
+      "type": "startup",
+      "accent": "orange"
+    },
+    {
+      "id": 6,
+      "year": "2025",
+      "title": "Back to School (Again)",
+      "description": "Started MCA at VIT online. Leveling up theory while shipping in production.",
+      "type": "education",
+      "accent": "white"
+    },
+    {
+      "id": 7,
+      "year": "Now",
+      "title": "Still Building",
+      "description": "Full stack. AI. Always solving something. The story continues.",
+      "type": "current",
+      "accent": "orange"
+    }
+  ],
+
+  "experience": [
+    {
+      "company": "Circle Health",
+      "role": "Founding Engineer",
+      "period": "Oct 2022 — Present",
+      "type": "full-time",
+      "highlights": [
+        "Customer app — 40% increase in platform users, avg 1 hr/user/month",
+        "WhatsApp chatbot — 30% increase in consultation bookings",
+        "Partner integrations expanding US business by 30%",
+        "Medical AI Agent — books consultations, reviews vitals, generates prescriptions, creates care plans, identifies care gaps — 15x care manager efficiency, 30% more billing",
+        "US healthcare compliance (HIPAA), security architecture, system protection"
+      ]
+    },
+    {
+      "company": "Ferronyx",
+      "role": "CTO & Co-founder",
+      "period": "2024 — 8 months",
+      "type": "startup",
+      "highlights": [
+        "Built a robotics fleet observability platform end-to-end from scratch",
+        "Stack: Flask, React, Claude API, LangChain, LangGraph",
+        "RAG applications, AI agents, anomaly detection on ROS2 data",
+        "Shutdown after 8 months — the engineering was solid, the lessons were invaluable"
+      ]
+    }
+  ],
+
+  "projects": [
+    {
+      "name": "Medical AI Agent",
+      "description": "AI agent for care managers that books consultations, schedules calls, reviews vitals, generates prescriptions, creates care plans, and identifies care gaps.",
+      "tech": ["Node.js", "LangGraph", "PostgreSQL", "React"],
+      "impact": "15x care manager efficiency · 30% more billing"
+    },
+    {
+      "name": "WhatsApp Health Bot",
+      "description": "Healthcare consultation booking chatbot over WhatsApp — accessible, conversational, instant.",
+      "tech": ["Node.js", "WhatsApp Cloud API"],
+      "impact": "30% increase in consultation bookings"
+    },
+    {
+      "name": "SRE Platform",
+      "description": "Full-stack site reliability platform — AWS monitoring, Slack alerts, status page, anomaly detection, AI healing recommendations, and an auto-healing daemon.",
+      "tech": ["Node.js", "React", "PostgreSQL", "Redis", "AWS", "Sentry"],
+      "impact": "Production-grade SRE system, built from zero"
+    },
+    {
+      "name": "Ferronyx Platform",
+      "description": "Robotic fleet observability platform with real-time monitoring, RAG-based runbook generation, and LLM-powered diagnostics on ROS2 data.",
+      "tech": ["Flask", "React", "Claude API", "LangChain", "LangGraph"],
+      "impact": "Shipped end-to-end. Solid engineering, big lessons."
+    }
+  ],
+
+  "education": [
+    {
+      "degree": "MCA",
+      "institute": "VIT (Online)",
+      "period": "2025 — 2027",
+      "status": "Ongoing"
+    },
+    {
+      "degree": "BCA",
+      "institute": "Bachelor of Computer Applications",
+      "period": "2020 — 2023",
+      "status": "Completed"
+    }
+  ]
+}
