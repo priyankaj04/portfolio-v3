@@ -86,41 +86,6 @@ body::after {
   background: var(--color-orange);
 }
 
-/* Custom cursor — only on fine pointer devices */
-@media (pointer: fine) {
-  html, body { cursor: none; }
-  a, button, [role='button'], [data-hover] { cursor: none; }
-}
-
-.cursor-dot,
-.cursor-ring {
-  position: fixed;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  z-index: 9999;
-  border-radius: 999px;
-  mix-blend-mode: difference;
-  will-change: transform;
-}
-
-.cursor-dot {
-  width: 6px;
-  height: 6px;
-  background: var(--color-orange);
-  margin: -3px 0 0 -3px;
-  transition: transform 80ms ease-out, opacity 200ms ease;
-}
-
-.cursor-ring {
-  width: 36px;
-  height: 36px;
-  margin: -18px 0 0 -18px;
-  border: 1px solid var(--color-orange);
-  transition: transform 320ms cubic-bezier(0.16, 1, 0.3, 1), opacity 200ms ease;
-  opacity: 0.55;
-}
-
 /* Animated underline link */
 .link-underline {
   position: relative;

@@ -1,56 +1,149 @@
 import { motion } from 'framer-motion';
 
+const LINES = [
+  { tag: 'const', name: ' stack ', op: '= {', muted: false },
+  { indent: 2, key: 'frontend:', val: "['React', 'Next.js']," },
+  { indent: 2, key: 'backend:', val: "['Node', 'Flask']," },
+  { indent: 2, key: 'data:', val: "['Postgres', 'Redis']," },
+  { indent: 2, key: 'ai:', val: "['Claude', 'LangGraph']," },
+  { indent: 2, key: 'infra:', val: "['AWS', 'Docker'],", highlight: true },
+  { tag: '}', plain: true },
+  { empty: true },
+  { tag: 'export', name: ' default', op: ' stack', muted: true },
+];
+
 export default function SkillOrbs() {
   return (
     <motion.div
-      animate={{ y: [0, -10, 0] }}
-      transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
-      className="w-full max-w-[360px]"
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: '-80px' }}
+      transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
+      className="w-full max-w-[400px]"
     >
-      <svg viewBox="0 0 320 320" className="w-full h-auto">
-        <defs>
-          <radialGradient id="orbGlow" cx="50%" cy="50%" r="50%">
-            <stop offset="0%" stopColor="#f45d00" stopOpacity="0.3" />
-            <stop offset="100%" stopColor="#f45d00" stopOpacity="0" />
-          </radialGradient>
-        </defs>
+      {/* Ambient orange glow */}
+      <div className="relative">
+        <div
+          className="pointer-events-none absolute -inset-8 rounded-full"
+          style={{
+            background:
+              'radial-gradient(circle at 70% 30%, rgba(244,93,0,0.18) 0%, transparent 60%)',
+          }}
+        />
 
-        <circle cx="160" cy="160" r="150" fill="url(#orbGlow)" />
+        {/* Terminal window */}
+        <div className="relative border border-border-soft bg-surface/70 backdrop-blur-sm shadow-[0_0_60px_rgba(244,93,0,0.08)]">
+          {/* Title bar */}
+          <div className="flex items-center justify-between px-4 py-3 border-b border-border-soft">
+            <div className="flex items-center gap-1.5">
+              <span className="block h-2 w-2 rounded-full bg-orange" />
+              <span className="block h-2 w-2 rounded-full bg-line" />
+              <span className="block h-2 w-2 rounded-full bg-line" />
+            </div>
+            <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-muted">
+              ~/stack.ts
+            </span>
+            <span className="font-mono text-[10px] text-muted">×</span>
+          </div>
 
-        {/* Connection lines */}
-        <g stroke="#1f1f1f" strokeWidth="1">
-          <line x1="100" y1="80" x2="220" y2="120" />
-          <line x1="220" y1="120" x2="160" y2="220" />
-          <line x1="160" y1="220" x2="80" y2="180" />
-          <line x1="80" y1="180" x2="100" y2="80" />
-          <line x1="240" y1="220" x2="220" y2="120" />
-          <line x1="240" y1="220" x2="160" y2="220" />
-        </g>
+          {/* Code body */}
+          <div className="relative px-5 py-5 font-mono text-[12px] leading-[1.85]">
+            {LINES.map((line, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, x: -8 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{
+                  duration: 0.5,
+                  ease: [0.16, 1, 0.3, 1],
+                  delay: 0.15 + i * 0.07,
+                }}
+                className="flex items-baseline gap-3"
+              >
+                <span className="select-none text-muted/50 w-4 text-right">
+                  {i + 1}
+                </span>
+                <span className="flex-1 whitespace-pre">
+                  {line.empty ? (
+                    ' '
+                  ) : line.plain ? (
+                    <span className="text-ink/80">{line.tag}</span>
+                  ) : line.key ? (
+                    <>
+                      <span>{'  '.repeat(line.indent || 0)}</span>
+                      <span className={line.highlight ? 'text-orange' : 'text-ink/85'}>
+                        {line.key}
+                      </span>{' '}
+                      <span className={line.highlight ? 'text-orange/80' : 'text-muted'}>
+                        {line.val}
+                      </span>
+                    </>
+                  ) : (
+                    <>
+                      <span className="text-orange">{line.tag}</span>
+                      <span className={line.muted ? 'text-muted' : 'text-ink'}>
+                        {line.name}
+                      </span>
+                      <span className="text-ink/70">{line.op}</span>
+                    </>
+                  )}
+                </span>
+              </motion.div>
+            ))}
 
-        {/* Orbs */}
-        <motion.g
-          animate={{ rotate: 360 }}
-          transition={{ duration: 60, repeat: Infinity, ease: 'linear' }}
-          style={{ transformOrigin: '160px 160px' }}
-        >
-          <circle cx="100" cy="80" r="22" stroke="#2a2a2a" strokeWidth="1" fill="#111111" />
-          <circle cx="220" cy="120" r="34" stroke="#f45d00" strokeWidth="1" fill="#f45d0011" />
-          <circle cx="160" cy="220" r="18" fill="#f45d00" />
-          <circle cx="80" cy="180" r="14" stroke="#2a2a2a" strokeWidth="1" fill="#111111" />
-          <circle cx="240" cy="220" r="10" fill="#f5f5f5" opacity="0.5" />
-          <circle cx="60" cy="100" r="4" fill="#f45d00" />
-          <circle cx="260" cy="80" r="3" fill="#6b6b6b" />
-          <circle cx="200" cy="280" r="3" fill="#f5f5f5" opacity="0.5" />
-        </motion.g>
+            {/* Blinking cursor */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 1.2 }}
+              className="flex items-baseline gap-3 mt-1"
+            >
+              <span className="select-none text-muted/50 w-4 text-right">
+                {LINES.length + 1}
+              </span>
+              <motion.span
+                animate={{ opacity: [1, 0, 1] }}
+                transition={{ duration: 1.2, repeat: Infinity, ease: 'easeInOut' }}
+                className="inline-block h-3 w-[7px] bg-orange align-baseline"
+              />
+            </motion.div>
+          </div>
+
+          {/* Status bar */}
+          <div className="flex items-center justify-between px-4 py-2 border-t border-border-soft font-mono text-[9px] tracking-[0.3em] uppercase text-muted">
+            <span className="flex items-center gap-2">
+              <span className="pulse-dot relative inline-flex h-1.5 w-1.5 bg-orange" />
+              <span>Live</span>
+            </span>
+            <span>typescript</span>
+            <span>UTF-8</span>
+          </div>
+        </div>
 
         {/* Corner crosshairs */}
-        <g stroke="#2a2a2a" strokeWidth="1">
-          <line x1="10" y1="10" x2="26" y2="10" />
-          <line x1="10" y1="10" x2="10" y2="26" />
-          <line x1="310" y1="310" x2="294" y2="310" />
-          <line x1="310" y1="310" x2="310" y2="294" />
-        </g>
-      </svg>
+        <svg
+          className="absolute -top-2 -left-2 h-4 w-4 text-orange"
+          viewBox="0 0 16 16"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.5"
+        >
+          <line x1="0" y1="0" x2="6" y2="0" />
+          <line x1="0" y1="0" x2="0" y2="6" />
+        </svg>
+        <svg
+          className="absolute -bottom-2 -right-2 h-4 w-4 text-orange"
+          viewBox="0 0 16 16"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.5"
+        >
+          <line x1="16" y1="16" x2="10" y2="16" />
+          <line x1="16" y1="16" x2="16" y2="10" />
+        </svg>
+      </div>
     </motion.div>
   );
 }

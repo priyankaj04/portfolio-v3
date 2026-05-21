@@ -26,7 +26,7 @@ export default function Projects() {
         <FeaturedCard project={featured} index={0} />
         {/* Smaller cards */}
         {rest.map((p, i) => (
-          <ProjectCard key={p.name} project={p} index={i + 1} variant={i === 2 ? 'wide' : 'small'} />
+          <ProjectCard key={p.name} project={p} index={i + 1} variant={i === 1 ? 'wide' : 'small'} />
         ))}
       </div>
     </section>
@@ -34,8 +34,13 @@ export default function Projects() {
 }
 
 function FeaturedCard({ project }) {
+  const Wrapper = project.url ? motion.a : motion.article;
+  const linkProps = project.url
+    ? { href: project.url, target: '_blank', rel: 'noopener noreferrer' }
+    : {};
   return (
-    <motion.article
+    <Wrapper
+      {...linkProps}
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-80px' }}
@@ -91,20 +96,25 @@ function FeaturedCard({ project }) {
           </div>
         </div>
       </div>
-    </motion.article>
+    </Wrapper>
   );
 }
 
 function ProjectCard({ project, index, variant }) {
   const isWide = variant === 'wide';
+  const Wrapper = project.url ? motion.a : motion.article;
+  const linkProps = project.url
+    ? { href: project.url, target: '_blank', rel: 'noopener noreferrer' }
+    : {};
   return (
-    <motion.article
+    <Wrapper
+      {...linkProps}
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-80px' }}
       transition={{ duration: 0.8, ease, delay: index * 0.08 }}
       className={`group relative ${
-        isWide ? 'col-span-12' : 'col-span-12 lg:col-span-4'
+        isWide ? 'col-span-12' : 'col-span-12 lg:col-span-4 lg:row-span-2'
       } border border-border-soft bg-surface/30 hover:bg-surface/60 hover:border-orange/40 hover:-translate-y-1 hover:shadow-[0_0_40px_rgba(244,93,0,0.12)] transition-all duration-500`}
       data-hover
     >
@@ -145,7 +155,7 @@ function ProjectCard({ project, index, variant }) {
           </div>
         </div>
       </div>
-    </motion.article>
+    </Wrapper>
   );
 }
 

@@ -17,7 +17,7 @@ export default function Education() {
         label="Education"
         title="Always learning."
         meta="Theory ⇄ Practice"
-        accent="Papers + production"
+        accent="Curious, by default"
       />
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
