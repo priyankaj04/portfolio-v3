@@ -22,7 +22,7 @@ export default function Skills() {
     >
       <SectionBackground variant="rings" opacity={0.05} />
       <SectionHeader
-        index="04"
+        index="03"
         label="Stack"
         title="Tools of the trade."
         meta="3 groups · 17 weapons"

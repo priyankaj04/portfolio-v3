@@ -1,21 +1,25 @@
 import { motion } from 'framer-motion';
 import { Parallax } from 'react-scroll-parallax';
 import data from '../data/portfolio.json';
+import SectionBackground from './SectionBackground.jsx';
 
 const ease = [0.16, 1, 0.3, 1];
 
 export default function Hero() {
-  const { meta } = data;
+  const { meta, about } = data;
 
   return (
     <section
       id="hero"
       className="relative min-h-screen w-full overflow-hidden border-b border-border-soft"
     >
+      {/* Dot pattern background */}
+      <SectionBackground variant="dots" opacity={0.06} mask="center" />
+
       {/* Background grid (parallax) */}
       <Parallax speed={-12} className="absolute inset-0">
         <div
-          className="absolute inset-0 opacity-[0.05]"
+          className="absolute inset-0 opacity-[0.04]"
           style={{
             backgroundImage:
               'linear-gradient(to right, #2a2a2a 1px, transparent 1px), linear-gradient(to bottom, #2a2a2a 1px, transparent 1px)',
@@ -33,89 +37,150 @@ export default function Hero() {
             'radial-gradient(circle, rgba(244,93,0,0.18) 0%, rgba(244,93,0,0.04) 40%, transparent 70%)',
         }}
       />
+      <div
+        className="pointer-events-none absolute -bottom-32 -right-32 w-[480px] h-[480px] rounded-full"
+        style={{
+          background:
+            'radial-gradient(circle, rgba(244,93,0,0.10) 0%, rgba(244,93,0,0.02) 50%, transparent 75%)',
+        }}
+      />
 
-      {/* Main content grid */}
-      <div className="relative z-10 min-h-screen px-6 md:px-12 lg:px-16 pt-36 md:pt-40 pb-32 flex items-center justify-center">
-        <div className="w-full flex flex-col items-center text-center">
-          {/* eyebrow */}
-          <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease, delay: 0.1 }}
-            className="flex items-center gap-3 mb-6"
-          >
-            <span className="block h-px w-8 bg-orange" />
-            <span className="font-mono text-[11px] tracking-[0.32em] uppercase text-muted">
-              <span className="text-ink">01</span> / Introducing
-            </span>
-            <span className="block h-px w-8 bg-orange" />
-          </motion.div>
-
-          {/* Display name */}
-          <h1
-            className="font-display font-semibold text-ink tracking-tight leading-[0.84] text-center"
-            style={{ fontSize: 'clamp(64px, 13vw, 200px)' }}
-          >
-            <motion.span
-              initial={{ opacity: 0, y: 80 }}
+      {/* Main content */}
+      <div className="relative z-10 min-h-screen px-6 md:px-12 lg:px-16 pt-32 md:pt-36 pb-28 flex items-center">
+        <div className="w-full grid grid-cols-12 gap-8 md:gap-12 lg:gap-16 items-center">
+          {/* LEFT — Identity */}
+          <div className="col-span-12 lg:col-span-7">
+            {/* eyebrow */}
+            <motion.div
+              initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, ease, delay: 0.15 }}
-              className="block"
+              transition={{ duration: 0.8, ease, delay: 0.1 }}
+              className="flex items-center gap-3 mb-8"
             >
-              Priyanka<span className="text-orange">.</span>
-            </motion.span>
-            <motion.span
-              initial={{ opacity: 0, y: 80 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, ease, delay: 0.3 }}
-              className="block"
-            >
-              J
-            </motion.span>
-          </h1>
+              <span className="block h-px w-8 bg-orange" />
+              <span className="font-mono text-[11px] tracking-[0.32em] uppercase text-muted">
+                <span className="text-ink">01</span> / Introducing
+              </span>
+            </motion.div>
 
-          {/* Title + tagline */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, ease, delay: 0.5 }}
-            className="mt-10 max-w-2xl flex flex-col items-center"
-          >
-            <div className="flex items-center gap-4">
+            {/* Display name */}
+            <h1
+              className="font-display font-semibold text-ink tracking-tight leading-[0.86]"
+              style={{ fontSize: 'clamp(56px, 9.5vw, 152px)' }}
+            >
+              <motion.span
+                initial={{ opacity: 0, y: 60 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, ease, delay: 0.15 }}
+                className="block"
+              >
+                Priyanka<span className="text-orange">.</span>
+              </motion.span>
+              <motion.span
+                initial={{ opacity: 0, y: 60 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, ease, delay: 0.3 }}
+                className="block"
+              >
+                J
+              </motion.span>
+            </h1>
+
+            {/* Role */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.9, ease, delay: 0.5 }}
+              className="mt-8 flex items-center gap-4"
+            >
               <span className="block h-px w-10 bg-orange" />
               <span className="font-syne text-xs md:text-sm tracking-[0.32em] uppercase text-ink">
                 {meta.title}
               </span>
-              <span className="block h-px w-10 bg-orange" />
-            </div>
-            <p className="mt-6 font-sans text-lg md:text-2xl text-ink/80 leading-relaxed text-center">
-              <span className="text-orange align-top">&ldquo;</span>
-              {meta.tagline}
-              <span className="text-orange align-bottom">&rdquo;</span>
-            </p>
-          </motion.div>
+            </motion.div>
 
-          {/* CTAs */}
+            {/* Bio */}
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.9, ease, delay: 0.6 }}
+              className="mt-8 max-w-xl font-sans text-lg md:text-xl leading-[1.55] text-ink/80"
+            >
+              Passionate, curious developer constantly looking for problems to solve.
+              I work at the intersection of{' '}
+              <span className="text-orange">full stack engineering</span> and{' '}
+              <span className="text-orange">AI</span> — building systems that scale,
+              agents that think, and products that <span className="text-orange">matter</span>.
+            </motion.p>
+
+            {/* CTAs */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.9, ease, delay: 0.75 }}
+              className="mt-10 flex flex-wrap gap-3"
+            >
+              <a
+                href="#projects"
+                className="group inline-flex items-center gap-3 px-6 py-4 bg-orange text-bg font-syne text-xs md:text-sm tracking-[0.28em] uppercase font-semibold transition-all hover:bg-ink hover:shadow-[0_0_40px_rgba(244,93,0,0.35)]"
+              >
+                View work
+                <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
+              </a>
+              <a
+                href="#contact"
+                className="group inline-flex items-center gap-3 px-6 py-4 border border-border-soft text-ink font-syne text-xs md:text-sm tracking-[0.28em] uppercase font-semibold transition-all hover:border-orange hover:text-orange"
+              >
+                Get in touch
+                <span className="transition-transform duration-300 group-hover:translate-x-1">↗</span>
+              </a>
+            </motion.div>
+          </div>
+
+          {/* RIGHT — Current focus */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, ease, delay: 0.65 }}
-            className="mt-12 flex flex-wrap gap-3 justify-center"
+            initial={{ opacity: 0, x: 30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1, ease, delay: 0.55 }}
+            className="col-span-12 lg:col-span-5 lg:pl-10 lg:border-l lg:border-border-soft"
           >
-            <a
-              href="#projects"
-              className="group inline-flex items-center gap-3 px-6 py-4 bg-orange text-bg font-syne text-xs md:text-sm tracking-[0.28em] uppercase font-semibold transition-all hover:bg-ink hover:shadow-[0_0_40px_rgba(244,93,0,0.35)]"
-            >
-              View work
-              <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
-            </a>
-            <a
-              href="#contact"
-              className="group inline-flex items-center gap-3 px-6 py-4 border border-border-soft text-ink font-syne text-xs md:text-sm tracking-[0.28em] uppercase font-semibold transition-all hover:border-orange hover:text-orange"
-            >
-              Get in touch
-              <span className="transition-transform duration-300 group-hover:translate-x-1">↗</span>
-            </a>
+            <div className="flex items-center justify-between mb-8">
+              <div className="font-mono text-[10px] tracking-[0.3em] uppercase text-muted">
+                <span className="text-orange">//</span> current_focus
+              </div>
+              <div className="font-mono text-[10px] tracking-[0.3em] uppercase text-muted">
+                {about.currentFocus.length.toString().padStart(2, '0')} areas
+              </div>
+            </div>
+
+            <ul className="space-y-2">
+              {about.currentFocus.map((item, i) => (
+                <motion.li
+                  key={item}
+                  initial={{ opacity: 0, x: -16 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6, ease, delay: 0.7 + i * 0.1 }}
+                  className="group relative flex items-center gap-5 py-5 border-b border-border-soft hover:border-orange/40 transition-colors cursor-default"
+                >
+                  <span className="font-mono text-[11px] text-muted">
+                    0{i + 1}
+                  </span>
+                  <span className="flex-1 font-syne text-xl md:text-2xl text-ink group-hover:text-orange transition-colors">
+                    {item}
+                  </span>
+                  <span className="font-mono text-orange opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all">
+                    →
+                  </span>
+                </motion.li>
+              ))}
+            </ul>
+
+            <div className="mt-8 inline-flex items-center gap-3 px-3 py-2 border border-orange/40 bg-orange-dim">
+              <span className="pulse-dot relative inline-flex h-2 w-2 bg-orange" />
+              <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-orange">
+                Currently shipping
+              </span>
+            </div>
           </motion.div>
         </div>
       </div>
@@ -132,8 +197,9 @@ export default function Hero() {
           </motion.span>
           Scroll to begin
         </div>
-        <div className="hidden md:block font-mono text-[10px] tracking-[0.3em] uppercase text-muted">
-          07 sections / 4 yrs shipped / ∞ commits
+        <div className="hidden md:flex items-center gap-3 font-mono text-[10px] tracking-[0.3em] uppercase text-muted">
+          <span className="text-orange">→</span>
+          Based in {meta.location}
         </div>
         <div className="flex items-center gap-2 font-mono text-[10px] tracking-[0.3em] uppercase">
           <span className="pulse-dot relative inline-flex h-2 w-2 bg-emerald-400" />

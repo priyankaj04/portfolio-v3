@@ -29,7 +29,7 @@ export default function Timeline() {
     >
       <SectionBackground variant="plus" opacity={0.05} />
       <SectionHeader
-        index="03"
+        index="02"
         label="The Story"
         title="A life, in code."
         meta="2020 — Now"

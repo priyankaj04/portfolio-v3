@@ -15,7 +15,7 @@ export default function Education() {
     >
       <SectionBackground variant="ticks" opacity={0.05} />
       <SectionHeader
-        index="07"
+        index="06"
         label="Education"
         title="Always learning."
         meta="Theory ⇄ Practice"

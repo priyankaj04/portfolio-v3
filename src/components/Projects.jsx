@@ -20,7 +20,7 @@ export default function Projects() {
     >
       <SectionBackground variant="diagonals" opacity={0.05} />
       <SectionHeader
-        index="06"
+        index="05"
         label="Selected Work"
         title="Things I've built."
         meta={`${projects.length} projects`}

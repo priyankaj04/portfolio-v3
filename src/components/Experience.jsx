@@ -32,7 +32,7 @@ export default function Experience() {
     >
       <SectionBackground variant="squares" opacity={0.05} />
       <SectionHeader
-        index="05"
+        index="04"
         label="Experience"
         title="Shipped in production."
         meta={`${experience.length} chapters`}

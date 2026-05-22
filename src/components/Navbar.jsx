@@ -3,12 +3,12 @@ import { motion, useScroll, useSpring } from 'framer-motion';
 import data from '../data/portfolio.json';
 
 const NAV = [
-  { id: 'about', label: 'About', n: '02' },
-  { id: 'timeline', label: 'Story', n: '03' },
-  { id: 'skills', label: 'Skills', n: '04' },
-  { id: 'experience', label: 'Work', n: '05' },
-  { id: 'projects', label: 'Projects', n: '06' },
-  { id: 'contact', label: 'Contact', n: '08' },
+  { id: 'timeline', label: 'Story', n: '02' },
+  { id: 'skills', label: 'Skills', n: '03' },
+  { id: 'experience', label: 'Work', n: '04' },
+  { id: 'projects', label: 'Projects', n: '05' },
+  { id: 'education', label: 'Education', n: '06' },
+  { id: 'contact', label: 'Contact', n: '07' },
 ];
 
 export default function Navbar() {
