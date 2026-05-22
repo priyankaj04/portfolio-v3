@@ -42,7 +42,7 @@ export default function Skills() {
             >
               {/* Group header */}
               <div className="flex items-center gap-4 mb-5">
-                <span className="font-mono text-[11px] tracking-[0.32em] uppercase text-emerald">
+                <span className="font-mono text-[11px] tracking-[0.32em] uppercase text-peach">
                   {group.n}
                 </span>
                 <span className="font-syne text-sm tracking-[0.28em] uppercase text-ink">
@@ -63,16 +63,16 @@ export default function Skills() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, ease, delay: 0.1 + si * 0.04 }}
-                    className="group inline-flex items-center gap-2 px-4 py-2 border border-line hover:border-emerald hover:bg-emerald-dim transition-all duration-300 rounded-full"
+                    className="group inline-flex items-center gap-2 px-4 py-2 border border-line hover:border-peach hover:bg-peach-dim transition-all duration-300 rounded-full"
                     data-hover
                   >
-                    <span className="font-mono text-[10px] text-muted group-hover:text-emerald transition-colors">
+                    <span className="font-mono text-[10px] text-muted group-hover:text-peach transition-colors">
                       [
                     </span>
-                    <span className="font-syne text-sm text-ink/85 group-hover:text-emerald transition-colors">
+                    <span className="font-syne text-sm text-ink/85 group-hover:text-peach transition-colors">
                       {skill}
                     </span>
-                    <span className="font-mono text-[10px] text-muted group-hover:text-emerald transition-colors">
+                    <span className="font-mono text-[10px] text-muted group-hover:text-peach transition-colors">
                       ]
                     </span>
                   </motion.span>

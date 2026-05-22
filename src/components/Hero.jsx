@@ -25,12 +25,12 @@ export default function Hero() {
         />
       </Parallax>
 
-      {/* Ambient emerald glow */}
+      {/* Ambient peach glow */}
       <div
         className="pointer-events-none absolute -top-40 -left-40 w-[600px] h-[600px] rounded-full"
         style={{
           background:
-            'radial-gradient(circle, rgba(16, 185, 129,0.18) 0%, rgba(16, 185, 129,0.04) 40%, transparent 70%)',
+            'radial-gradient(circle, rgba(251, 146, 60,0.18) 0%, rgba(251, 146, 60,0.04) 40%, transparent 70%)',
         }}
       />
 
@@ -44,11 +44,11 @@ export default function Hero() {
             transition={{ duration: 0.8, ease, delay: 0.1 }}
             className="flex items-center gap-3 mb-6"
           >
-            <span className="block h-px w-8 bg-emerald" />
+            <span className="block h-px w-8 bg-peach" />
             <span className="font-mono text-[11px] tracking-[0.32em] uppercase text-muted">
               <span className="text-ink">01</span> / Introducing
             </span>
-            <span className="block h-px w-8 bg-emerald" />
+            <span className="block h-px w-8 bg-peach" />
           </motion.div>
 
           {/* Display name */}
@@ -62,7 +62,7 @@ export default function Hero() {
               transition={{ duration: 1, ease, delay: 0.15 }}
               className="block"
             >
-              Priyanka<span className="text-emerald">.</span>
+              Priyanka<span className="text-peach">.</span>
             </motion.span>
             <motion.span
               initial={{ opacity: 0, y: 80 }}
@@ -82,16 +82,16 @@ export default function Hero() {
             className="mt-10 max-w-2xl flex flex-col items-center"
           >
             <div className="flex items-center gap-4">
-              <span className="block h-px w-10 bg-emerald" />
+              <span className="block h-px w-10 bg-peach" />
               <span className="font-syne text-xs md:text-sm tracking-[0.32em] uppercase text-ink">
                 {meta.title}
               </span>
-              <span className="block h-px w-10 bg-emerald" />
+              <span className="block h-px w-10 bg-peach" />
             </div>
             <p className="mt-6 font-sans text-lg md:text-2xl text-ink/80 leading-relaxed text-center">
-              <span className="text-emerald align-top">&ldquo;</span>
+              <span className="text-peach align-top">&ldquo;</span>
               {meta.tagline}
-              <span className="text-emerald align-bottom">&rdquo;</span>
+              <span className="text-peach align-bottom">&rdquo;</span>
             </p>
           </motion.div>
 
@@ -104,14 +104,14 @@ export default function Hero() {
           >
             <a
               href="#projects"
-              className="group inline-flex items-center gap-3 px-6 py-4 bg-emerald text-bg font-syne text-xs md:text-sm tracking-[0.28em] uppercase font-semibold transition-all hover:bg-ink hover:shadow-[0_0_40px_rgba(16, 185, 129,0.35)]"
+              className="group inline-flex items-center gap-3 px-6 py-4 bg-peach text-bg font-syne text-xs md:text-sm tracking-[0.28em] uppercase font-semibold transition-all hover:bg-ink hover:shadow-[0_0_40px_rgba(251, 146, 60,0.35)]"
             >
               View work
               <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
             </a>
             <a
               href="#contact"
-              className="group inline-flex items-center gap-3 px-6 py-4 border border-border-soft text-ink font-syne text-xs md:text-sm tracking-[0.28em] uppercase font-semibold transition-all hover:border-emerald hover:text-emerald"
+              className="group inline-flex items-center gap-3 px-6 py-4 border border-border-soft text-ink font-syne text-xs md:text-sm tracking-[0.28em] uppercase font-semibold transition-all hover:border-peach hover:text-peach"
             >
               Get in touch
               <span className="transition-transform duration-300 group-hover:translate-x-1">↗</span>
@@ -126,7 +126,7 @@ export default function Hero() {
           <motion.span
             animate={{ y: [0, 6, 0] }}
             transition={{ repeat: Infinity, duration: 2 }}
-            className="text-emerald"
+            className="text-peach"
           >
             ↓
           </motion.span>

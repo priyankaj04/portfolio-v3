@@ -52,7 +52,7 @@
       "title": "Built a Company",
       "description": "Co-founded Ferronyx — a robotics fleet observability platform. Flask, React, Claude API, LangChain, LangGraph. 8 months of solid engineering and big lessons.",
       "type": "startup",
-      "accent": "emerald"
+      "accent": "peach"
     },
     {
       "id": 5,
@@ -60,7 +60,7 @@
       "title": "Still Building",
       "description": "Full stack. AI. Always solving something. The story continues.",
       "type": "current",
-      "accent": "emerald"
+      "accent": "peach"
     }
   ],
 

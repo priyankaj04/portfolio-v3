@@ -55,7 +55,7 @@ export default function Contact() {
         className="pointer-events-none absolute left-1/2 top-1/3 -translate-x-1/2 w-[800px] h-[800px] rounded-full"
         style={{
           background:
-            'radial-gradient(circle, rgba(16, 185, 129,0.10) 0%, rgba(16, 185, 129,0.02) 50%, transparent 75%)',
+            'radial-gradient(circle, rgba(251, 146, 60,0.10) 0%, rgba(251, 146, 60,0.02) 50%, transparent 75%)',
         }}
       />
 
@@ -90,17 +90,17 @@ export default function Contact() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.7, ease, delay: i * 0.1 }}
-                className="group grid grid-cols-12 gap-3 items-center py-5 md:py-7 border-b border-border-soft last:border-0 hover:bg-emerald-dim transition-colors px-2 -mx-2"
+                className="group grid grid-cols-12 gap-3 items-center py-5 md:py-7 border-b border-border-soft last:border-0 hover:bg-peach-dim transition-colors px-2 -mx-2"
                 data-hover
               >
-                <div className="col-span-1 font-mono text-emerald text-lg">{row.icon}</div>
+                <div className="col-span-1 font-mono text-peach text-lg">{row.icon}</div>
                 <div className="col-span-3 md:col-span-2 font-mono text-[10px] tracking-[0.3em] uppercase text-muted">
                   {row.label}
                 </div>
-                <div className="col-span-7 md:col-span-8 font-syne text-base md:text-2xl text-ink group-hover:text-emerald transition-colors truncate">
+                <div className="col-span-7 md:col-span-8 font-syne text-base md:text-2xl text-ink group-hover:text-peach transition-colors truncate">
                   {row.display}
                 </div>
-                <div className="col-span-1 text-right font-mono text-muted group-hover:text-emerald group-hover:translate-x-1 transition-all">
+                <div className="col-span-1 text-right font-mono text-muted group-hover:text-peach group-hover:translate-x-1 transition-all">
                   ↗
                 </div>
               </motion.a>
@@ -148,11 +148,11 @@ export default function Contact() {
 function ContactStamp() {
   const nodes = [
     { x: 80, y: 70, r: 4, color: '#6b6b6b', delay: 0 },
-    { x: 280, y: 90, r: 6, color: '#10b981', delay: 0.4 },
+    { x: 280, y: 90, r: 6, color: '#fb923c', delay: 0.4 },
     { x: 60, y: 240, r: 5, color: '#f5f5f5', delay: 0.8 },
     { x: 270, y: 260, r: 4, color: '#6b6b6b', delay: 0.2 },
     { x: 200, y: 50, r: 3, color: '#f5f5f5', delay: 1.0 },
-    { x: 40, y: 160, r: 3, color: '#10b981', delay: 0.6 },
+    { x: 40, y: 160, r: 3, color: '#fb923c', delay: 0.6 },
   ];
 
   return (
@@ -162,15 +162,15 @@ function ContactStamp() {
         className="pointer-events-none absolute inset-0 rounded-full"
         style={{
           background:
-            'radial-gradient(circle at 50% 50%, rgba(16, 185, 129,0.20) 0%, transparent 65%)',
+            'radial-gradient(circle at 50% 50%, rgba(251, 146, 60,0.20) 0%, transparent 65%)',
         }}
       />
 
       <svg viewBox="0 0 360 360" className="relative w-full h-full">
         <defs>
           <radialGradient id="beaconCore" cx="50%" cy="50%" r="50%">
-            <stop offset="0%" stopColor="#10b981" stopOpacity="1" />
-            <stop offset="100%" stopColor="#10b981" stopOpacity="0.4" />
+            <stop offset="0%" stopColor="#fb923c" stopOpacity="1" />
+            <stop offset="100%" stopColor="#fb923c" stopOpacity="0.4" />
           </radialGradient>
         </defs>
 
@@ -192,7 +192,7 @@ function ContactStamp() {
             cy="180"
             r="40"
             fill="none"
-            stroke="#10b981"
+            stroke="#fb923c"
             strokeWidth="1"
             initial={{ opacity: 0, scale: 0.3 }}
             animate={{
@@ -280,14 +280,14 @@ function ContactStamp() {
           cy="180"
           r="6"
           fill="#0a0a0a"
-          stroke="#10b981"
+          stroke="#fb923c"
           strokeWidth="1.5"
           animate={{ opacity: [1, 0.4, 1] }}
           transition={{ duration: 1.6, repeat: Infinity, ease: 'easeInOut' }}
         />
 
         {/* Corner crosshairs */}
-        <g stroke="#10b981" strokeWidth="1.2">
+        <g stroke="#fb923c" strokeWidth="1.2">
           <line x1="14" y1="14" x2="26" y2="14" />
           <line x1="14" y1="14" x2="14" y2="26" />
           <line x1="346" y1="14" x2="334" y2="14" />
@@ -313,7 +313,7 @@ function ContactStamp() {
           x="340"
           y="354"
           textAnchor="end"
-          fill="#10b981"
+          fill="#fb923c"
           fontSize="9"
           fontFamily="JetBrains Mono"
           letterSpacing="2.5"

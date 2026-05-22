@@ -6,10 +6,10 @@ export default function ContactWave({ className = '' }) {
       <svg viewBox="0 0 1440 220" className="w-full h-auto block" preserveAspectRatio="none">
         <defs>
           <linearGradient id="waveLine" x1="0" x2="1" y1="0" y2="0">
-            <stop offset="0%" stopColor="#10b981" stopOpacity="0" />
-            <stop offset="35%" stopColor="#10b981" stopOpacity="0.65" />
-            <stop offset="65%" stopColor="#10b981" stopOpacity="0.65" />
-            <stop offset="100%" stopColor="#10b981" stopOpacity="0" />
+            <stop offset="0%" stopColor="#fb923c" stopOpacity="0" />
+            <stop offset="35%" stopColor="#fb923c" stopOpacity="0.65" />
+            <stop offset="65%" stopColor="#fb923c" stopOpacity="0.65" />
+            <stop offset="100%" stopColor="#fb923c" stopOpacity="0" />
           </linearGradient>
           <linearGradient id="waveLine2" x1="0" x2="1" y1="0" y2="0">
             <stop offset="0%" stopColor="#f5f5f5" stopOpacity="0" />

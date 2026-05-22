@@ -45,8 +45,8 @@ export default function Timeline() {
           style={{
             height: threadHeight,
             background:
-              'linear-gradient(to bottom, rgba(16, 185, 129,0) 0%, #10b981 18%, #10b981 82%, rgba(16, 185, 129,0) 100%)',
-            boxShadow: '0 0 12px rgba(16, 185, 129,0.45)',
+              'linear-gradient(to bottom, rgba(251, 146, 60,0) 0%, #fb923c 18%, #fb923c 82%, rgba(251, 146, 60,0) 100%)',
+            boxShadow: '0 0 12px rgba(251, 146, 60,0.45)',
           }}
         />
 
@@ -59,11 +59,11 @@ export default function Timeline() {
                 <div className="absolute left-4 md:left-1/2 -translate-x-1/2 top-1 z-10 flex items-center justify-center">
                   <div
                     className={`relative h-3 w-3 rotate-45 ring-[6px] ring-bg ${
-                      item.type === 'current' ? 'bg-emerald shadow-[0_0_18px_rgba(16, 185, 129,0.7)]' : 'bg-ink'
+                      item.type === 'current' ? 'bg-peach shadow-[0_0_18px_rgba(251, 146, 60,0.7)]' : 'bg-ink'
                     }`}
                   >
                     {item.type === 'current' && (
-                      <span className="absolute inset-0 animate-ping bg-emerald" />
+                      <span className="absolute inset-0 animate-ping bg-peach" />
                     )}
                   </div>
                 </div>
@@ -97,7 +97,7 @@ export default function Timeline() {
       <div className="mt-10 max-w-6xl mx-auto flex items-center gap-4 font-mono text-[10px] tracking-[0.3em] uppercase text-muted">
         <span className="block h-px flex-1 bg-border-soft" />
         <span>End of thread · story continues</span>
-        <span className="text-emerald">◼</span>
+        <span className="text-peach">◼</span>
       </div>
     </section>
   );
@@ -118,8 +118,8 @@ function TimelineCard({ item, align }) {
       <div
         className={`relative p-6 md:p-8 border ${
           isCurrent
-            ? 'border-emerald/50 bg-emerald-dim'
-            : 'border-border-soft bg-surface/40 hover:border-emerald/40'
+            ? 'border-peach/50 bg-peach-dim'
+            : 'border-border-soft bg-surface/40 hover:border-peach/40'
         } transition-all duration-500 hover:bg-surface/70`}
       >
         {/* Header row */}
@@ -128,12 +128,12 @@ function TimelineCard({ item, align }) {
             align === 'right' ? 'md:flex-row-reverse' : ''
           }`}
         >
-          <span className={isCurrent ? 'text-emerald' : 'text-muted'}>{item.year}</span>
+          <span className={isCurrent ? 'text-peach' : 'text-muted'}>{item.year}</span>
           <span className="block h-px flex-1 max-w-12 bg-border-soft" />
           <span
             className={`px-2 py-1 border text-[9px] ${
               isCurrent
-                ? 'border-emerald text-emerald'
+                ? 'border-peach text-peach'
                 : 'border-border-soft text-muted'
             }`}
           >
@@ -155,7 +155,7 @@ function TimelineCard({ item, align }) {
         <span
           className={`absolute top-0 ${
             align === 'right' ? 'right-0' : 'left-0'
-          } h-full w-px bg-emerald scale-y-0 group-hover:scale-y-100 transition-transform duration-500 origin-top`}
+          } h-full w-px bg-peach scale-y-0 group-hover:scale-y-100 transition-transform duration-500 origin-top`}
         />
       </div>
     </motion.div>

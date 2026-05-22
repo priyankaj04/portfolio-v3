@@ -10,7 +10,7 @@ export default function TimelineThread({ className = '' }) {
       viewBox="0 0 4 1000"
       preserveAspectRatio="none"
       fill="none"
-      stroke="#10b981"
+      stroke="#fb923c"
       strokeWidth="2"
     >
       <line x1="2" y1="0" x2="2" y2="1000" strokeDasharray="1000" strokeDashoffset="0" />
