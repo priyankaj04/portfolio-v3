@@ -32,7 +32,7 @@ export default function Education() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-80px' }}
               transition={{ duration: 0.8, ease, delay: i * 0.12 }}
-              className="group relative border border-border-soft bg-surface/30 hover:bg-surface/60 hover:border-blue/40 transition-all duration-500"
+              className="group relative border border-border-soft bg-surface/30 hover:bg-surface/60 hover:border-emerald/40 transition-all duration-500"
               data-hover
             >
               <div className="p-6 md:p-10 h-full flex flex-col">
@@ -43,12 +43,12 @@ export default function Education() {
                   <span
                     className={`inline-flex items-center gap-2 font-mono text-[10px] tracking-[0.3em] uppercase px-2 py-1 border ${
                       ongoing
-                        ? 'border-blue text-blue bg-blue-dim'
+                        ? 'border-emerald text-emerald bg-emerald-dim'
                         : 'border-border-soft text-muted'
                     }`}
                   >
                     {ongoing ? (
-                      <span className="pulse-dot relative inline-block h-1.5 w-1.5 bg-blue rounded-full" />
+                      <span className="pulse-dot relative inline-block h-1.5 w-1.5 bg-emerald rounded-full" />
                     ) : (
                       <span className="inline-block h-1.5 w-1.5 border border-muted rounded-full" />
                     )}
@@ -57,7 +57,7 @@ export default function Education() {
                 </div>
 
                 <h3
-                  className="font-display font-semibold text-ink leading-[0.9] mb-4 group-hover:text-blue transition-colors"
+                  className="font-display font-semibold text-ink leading-[0.9] mb-4 group-hover:text-emerald transition-colors"
                   style={{ fontSize: 'clamp(56px, 8vw, 110px)' }}
                 >
                   {edu.degree}

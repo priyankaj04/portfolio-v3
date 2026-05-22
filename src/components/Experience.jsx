@@ -12,7 +12,7 @@ function renderHighlight(text) {
       return (
         <span
           key={i}
-          className="font-mono text-blue font-medium border border-blue/40 bg-blue-dim px-1.5 py-0.5 mx-0.5 align-middle text-[0.9em]"
+          className="font-mono text-emerald font-medium border border-emerald/40 bg-emerald-dim px-1.5 py-0.5 mx-0.5 align-middle text-[0.9em]"
         >
           {part}
         </span>
@@ -47,27 +47,27 @@ export default function Experience() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-80px' }}
             transition={{ duration: 0.9, ease, delay: i * 0.1 }}
-            className="group relative border border-border-soft bg-surface/30 hover:bg-surface/60 hover:border-blue/40 transition-all duration-500"
+            className="group relative border border-border-soft bg-surface/30 hover:bg-surface/60 hover:border-emerald/40 transition-all duration-500"
             data-hover
           >
-            {/* Blue edge on hover */}
-            <span className="absolute top-0 left-0 h-full w-px bg-blue scale-y-0 group-hover:scale-y-100 transition-transform duration-700 origin-top" />
+            {/* Emerald edge on hover */}
+            <span className="absolute top-0 left-0 h-full w-px bg-emerald scale-y-0 group-hover:scale-y-100 transition-transform duration-700 origin-top" />
 
             <div className="grid grid-cols-12 gap-6 md:gap-12 p-6 md:p-10">
               {/* Left: Company + Role */}
               <div className="col-span-12 lg:col-span-5">
                 <div className="flex items-center gap-3 mb-4 font-mono text-[10px] tracking-[0.3em] uppercase text-muted">
-                  <span className="text-blue">◆</span>
+                  <span className="text-emerald">◆</span>
                   <span>{exp.type}</span>
                   <span className="block h-px flex-1 bg-border-soft max-w-16" />
                 </div>
                 <h3
-                  className="font-display font-semibold text-ink leading-[0.95] mb-3 group-hover:text-blue transition-colors"
+                  className="font-display font-semibold text-ink leading-[0.95] mb-3 group-hover:text-emerald transition-colors"
                   style={{ fontSize: 'clamp(34px, 4.6vw, 60px)' }}
                 >
                   {exp.company}
                 </h3>
-                <div className="font-syne text-base md:text-lg text-blue tracking-wide mb-2">
+                <div className="font-syne text-base md:text-lg text-emerald tracking-wide mb-2">
                   {exp.role}
                 </div>
                 <div className="font-mono text-[11px] tracking-[0.28em] uppercase text-muted">
@@ -78,7 +78,7 @@ export default function Experience() {
               {/* Right: Highlights */}
               <div className="col-span-12 lg:col-span-7">
                 <div className="font-mono text-[10px] tracking-[0.3em] uppercase text-muted mb-5">
-                  <span className="text-blue">//</span> highlights
+                  <span className="text-emerald">//</span> highlights
                 </div>
                 <ul className="space-y-4">
                   {exp.highlights.map((h, hi) => (
@@ -90,7 +90,7 @@ export default function Experience() {
                       transition={{ duration: 0.5, ease, delay: 0.15 + hi * 0.06 }}
                       className="flex gap-4"
                     >
-                      <span className="font-mono text-blue flex-shrink-0 pt-1 text-sm">→</span>
+                      <span className="font-mono text-emerald flex-shrink-0 pt-1 text-sm">→</span>
                       <span className="font-sans text-ink/85 text-base leading-relaxed">
                         {renderHighlight(h)}
                       </span>

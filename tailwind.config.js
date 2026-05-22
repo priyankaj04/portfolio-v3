@@ -8,9 +8,9 @@ export default {
         surface: '#111111',
         'border-soft': '#1f1f1f',
         line: '#2a2a2a',
-        blue: {
-          DEFAULT: '#1d4ed8',
-          dim: 'rgba(29, 78, 216, 0.08)',
+        emerald: {
+          DEFAULT: '#10b981',
+          dim: 'rgba(16, 185, 129, 0.08)',
         },
         ink: '#f5f5f5',
         muted: '#6b6b6b',
