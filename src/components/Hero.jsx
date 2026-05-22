@@ -14,7 +14,7 @@ export default function Hero() {
       className="relative min-h-screen w-full overflow-hidden border-b border-border-soft"
     >
       {/* Dot pattern background */}
-      <SectionBackground variant="dots" opacity={0.06} mask="center" />
+      <SectionBackground variant="dots" opacity={0.08} mask="center" />
 
       {/* Background grid (parallax) */}
       <Parallax speed={-12} className="absolute inset-0">

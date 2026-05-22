@@ -20,7 +20,7 @@ export default function Skills() {
       id="skills"
       className="relative px-6 md:px-12 lg:px-16 py-28 md:py-40 border-b border-border-soft overflow-hidden"
     >
-      <SectionBackground variant="rings" opacity={0.05} />
+      <SectionBackground variant="rings" opacity={0.08} mask="fade" />
       <SectionHeader
         index="03"
         label="Stack"

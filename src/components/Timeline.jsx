@@ -45,7 +45,7 @@ export default function Timeline() {
       id="timeline"
       className="relative px-6 md:px-12 lg:px-16 py-28 md:py-40 border-b border-border-soft overflow-hidden"
     >
-      <SectionBackground variant="plus" opacity={0.05} />
+      <SectionBackground variant="plus" opacity={0.08} mask="center"  />
       <SectionHeader
         index="02"
         label="The Story"
