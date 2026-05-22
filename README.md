@@ -68,7 +68,7 @@ All sections read from this single file. Update here, reflects everywhere.
 
   "about": {
     "bio": "Passionate, curious developer constantly looking for problems to solve. I work at the intersection of full stack engineering and AI — building systems that scale, agents that think, and products that matter.",
-    "currentFocus": ["AI/ML Engineering", "Inference Engineering", "Full Stack Systems"]
+    "currentFocus": ["AI Engineering", "DevOps Engineering", "Full Stack Systems"]
   },
 
   "skills": {

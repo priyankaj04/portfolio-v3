@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import data from '../data/portfolio.json';
 import SectionHeader from './SectionHeader.jsx';
+import SectionBackground from './SectionBackground.jsx';
 
 const ease = [0.16, 1, 0.3, 1];
 
@@ -9,6 +10,7 @@ export default function About() {
 
   return (
     <section id="about" className="relative px-6 md:px-12 lg:px-16 py-28 md:py-40 border-b border-border-soft overflow-hidden">
+      <SectionBackground variant="dots" opacity={0.05} />
       {/* decorative blob */}
       <div
         className="pointer-events-none absolute -right-40 top-1/3 w-[520px] h-[520px] rounded-full"

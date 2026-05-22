@@ -2,6 +2,7 @@ import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import data from '../data/portfolio.json';
 import SectionHeader from './SectionHeader.jsx';
+import SectionBackground from './SectionBackground.jsx';
 
 const ease = [0.16, 1, 0.3, 1];
 
@@ -24,8 +25,9 @@ export default function Timeline() {
   return (
     <section
       id="timeline"
-      className="relative px-6 md:px-12 lg:px-16 py-28 md:py-40 border-b border-border-soft"
+      className="relative px-6 md:px-12 lg:px-16 py-28 md:py-40 border-b border-border-soft overflow-hidden"
     >
+      <SectionBackground variant="plus" opacity={0.05} />
       <SectionHeader
         index="03"
         label="The Story"

@@ -1,8 +1,13 @@
 import { motion } from 'framer-motion';
 import data from '../data/portfolio.json';
 import SectionHeader from './SectionHeader.jsx';
+import SectionBackground from './SectionBackground.jsx';
 
 const ease = [0.16, 1, 0.3, 1];
+
+function displayUrl(url) {
+  return url.replace(/^https?:\/\//, '').replace(/\/$/, '');
+}
 
 export default function Projects() {
   const { projects } = data;
@@ -11,8 +16,9 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="relative px-6 md:px-12 lg:px-16 py-28 md:py-40 border-b border-border-soft"
+      className="relative px-6 md:px-12 lg:px-16 py-28 md:py-40 border-b border-border-soft overflow-hidden"
     >
+      <SectionBackground variant="diagonals" opacity={0.05} />
       <SectionHeader
         index="06"
         label="Selected Work"
@@ -56,8 +62,8 @@ function FeaturedCard({ project }) {
           <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-orange">
             ◼ Featured · 01
           </span>
-          <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-muted">
-            CASE STUDY
+          <span className="font-mono text-[10px] tracking-[0.2em] uppercase text-muted group-hover:text-orange transition-colors truncate max-w-[60%] text-right">
+            {project.url ? displayUrl(project.url) : 'CASE STUDY'}
           </span>
         </div>
 
@@ -119,12 +125,15 @@ function ProjectCard({ project, index, variant }) {
       data-hover
     >
       <div className="p-6 md:p-8 h-full flex flex-col">
-        <div className="flex items-center justify-between mb-5">
-          <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-muted">
+        <div className="flex items-center justify-between mb-5 gap-3">
+          <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-muted shrink-0">
             0{index + 1} / Project
           </span>
-          <span className="font-mono text-[10px] text-muted group-hover:text-orange transition-colors">
-            ↗
+          <span className="font-mono text-[10px] text-muted group-hover:text-orange transition-colors flex items-center gap-1.5 min-w-0">
+            {project.url && (
+              <span className="truncate tracking-[0.15em] uppercase">{displayUrl(project.url)}</span>
+            )}
+            <span className="shrink-0">↗</span>
           </span>
         </div>
 

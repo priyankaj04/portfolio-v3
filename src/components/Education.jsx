@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import data from '../data/portfolio.json';
 import SectionHeader from './SectionHeader.jsx';
+import SectionBackground from './SectionBackground.jsx';
 
 const ease = [0.16, 1, 0.3, 1];
 
@@ -10,8 +11,9 @@ export default function Education() {
   return (
     <section
       id="education"
-      className="relative px-6 md:px-12 lg:px-16 py-28 md:py-40 border-b border-border-soft"
+      className="relative px-6 md:px-12 lg:px-16 py-28 md:py-40 border-b border-border-soft overflow-hidden"
     >
+      <SectionBackground variant="ticks" opacity={0.05} />
       <SectionHeader
         index="07"
         label="Education"
