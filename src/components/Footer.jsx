@@ -3,7 +3,7 @@ export default function Footer() {
     <footer className="relative border-t border-border-soft px-6 md:px-12 lg:px-16 py-10">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-center font-mono text-[11px] tracking-[0.28em] uppercase text-muted">
         <div className="flex items-center gap-3">
-          <span className="inline-block h-2 w-2 bg-orange" />
+          <span className="inline-block h-2 w-2 bg-blue" />
           <span>© 2026</span>
         </div>
         <div className="md:text-center" />

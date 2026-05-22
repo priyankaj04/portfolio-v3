@@ -5,7 +5,7 @@ export default function SectionHeader({ index, label, title, meta, accent = 'A l
     <div className="mb-14 md:mb-20">
       <div className="flex flex-wrap items-center justify-between gap-4 mb-5 font-mono text-[11px] tracking-[0.3em] uppercase text-muted">
         <span className="flex items-center gap-3">
-          <span className="text-orange">◼</span>
+          <span className="text-blue">◼</span>
           <span>{index} / {label}</span>
         </span>
         {meta && <span className="text-muted/70">{meta}</span>}
@@ -23,7 +23,7 @@ export default function SectionHeader({ index, label, title, meta, accent = 'A l
       </motion.h2>
       {accent && (
         <div className="mt-5 flex items-center gap-4">
-          <span className="block h-px w-12 bg-orange" />
+          <span className="block h-px w-12 bg-blue" />
           <span className="font-syne text-xs md:text-sm tracking-[0.3em] uppercase text-muted">{accent}</span>
         </div>
       )}

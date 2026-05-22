@@ -21,22 +21,22 @@ export default function SkillOrbs() {
       transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
       className="w-full max-w-[400px]"
     >
-      {/* Ambient orange glow */}
+      {/* Ambient blue glow */}
       <div className="relative">
         <div
           className="pointer-events-none absolute -inset-8 rounded-full"
           style={{
             background:
-              'radial-gradient(circle at 70% 30%, rgba(244,93,0,0.18) 0%, transparent 60%)',
+              'radial-gradient(circle at 70% 30%, rgba(29, 78, 216,0.18) 0%, transparent 60%)',
           }}
         />
 
         {/* Terminal window */}
-        <div className="relative border border-border-soft bg-surface/70 backdrop-blur-sm shadow-[0_0_60px_rgba(244,93,0,0.08)]">
+        <div className="relative border border-border-soft bg-surface/70 backdrop-blur-sm shadow-[0_0_60px_rgba(29, 78, 216,0.08)]">
           {/* Title bar */}
           <div className="flex items-center justify-between px-4 py-3 border-b border-border-soft">
             <div className="flex items-center gap-1.5">
-              <span className="block h-2 w-2 rounded-full bg-orange" />
+              <span className="block h-2 w-2 rounded-full bg-blue" />
               <span className="block h-2 w-2 rounded-full bg-line" />
               <span className="block h-2 w-2 rounded-full bg-line" />
             </div>
@@ -72,16 +72,16 @@ export default function SkillOrbs() {
                   ) : line.key ? (
                     <>
                       <span>{'  '.repeat(line.indent || 0)}</span>
-                      <span className={line.highlight ? 'text-orange' : 'text-ink/85'}>
+                      <span className={line.highlight ? 'text-blue' : 'text-ink/85'}>
                         {line.key}
                       </span>{' '}
-                      <span className={line.highlight ? 'text-orange/80' : 'text-muted'}>
+                      <span className={line.highlight ? 'text-blue/80' : 'text-muted'}>
                         {line.val}
                       </span>
                     </>
                   ) : (
                     <>
-                      <span className="text-orange">{line.tag}</span>
+                      <span className="text-blue">{line.tag}</span>
                       <span className={line.muted ? 'text-muted' : 'text-ink'}>
                         {line.name}
                       </span>
@@ -106,7 +106,7 @@ export default function SkillOrbs() {
               <motion.span
                 animate={{ opacity: [1, 0, 1] }}
                 transition={{ duration: 1.2, repeat: Infinity, ease: 'easeInOut' }}
-                className="inline-block h-3 w-[7px] bg-orange align-baseline"
+                className="inline-block h-3 w-[7px] bg-blue align-baseline"
               />
             </motion.div>
           </div>
@@ -114,7 +114,7 @@ export default function SkillOrbs() {
           {/* Status bar */}
           <div className="flex items-center justify-between px-4 py-2 border-t border-border-soft font-mono text-[9px] tracking-[0.3em] uppercase text-muted">
             <span className="flex items-center gap-2">
-              <span className="pulse-dot relative inline-flex h-1.5 w-1.5 bg-orange" />
+              <span className="pulse-dot relative inline-flex h-1.5 w-1.5 bg-blue" />
               <span>Live</span>
             </span>
             <span>typescript</span>
@@ -124,7 +124,7 @@ export default function SkillOrbs() {
 
         {/* Corner crosshairs */}
         <svg
-          className="absolute -top-2 -left-2 h-4 w-4 text-orange"
+          className="absolute -top-2 -left-2 h-4 w-4 text-blue"
           viewBox="0 0 16 16"
           fill="none"
           stroke="currentColor"
@@ -134,7 +134,7 @@ export default function SkillOrbs() {
           <line x1="0" y1="0" x2="0" y2="6" />
         </svg>
         <svg
-          className="absolute -bottom-2 -right-2 h-4 w-4 text-orange"
+          className="absolute -bottom-2 -right-2 h-4 w-4 text-blue"
           viewBox="0 0 16 16"
           fill="none"
           stroke="currentColor"

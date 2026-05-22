@@ -51,7 +51,7 @@ function FeaturedCard({ project }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-80px' }}
       transition={{ duration: 0.9, ease }}
-      className="group relative col-span-12 lg:col-span-8 lg:row-span-2 border border-border-soft bg-surface/30 hover:bg-surface/60 hover:border-orange/40 hover:shadow-[0_0_60px_rgba(244,93,0,0.18)] transition-all duration-500 overflow-hidden"
+      className="group relative col-span-12 lg:col-span-8 lg:row-span-2 border border-border-soft bg-surface/30 hover:bg-surface/60 hover:border-blue/40 hover:shadow-[0_0_60px_rgba(29, 78, 216,0.18)] transition-all duration-500 overflow-hidden"
       data-hover
     >
       {/* Background illustration */}
@@ -59,10 +59,10 @@ function FeaturedCard({ project }) {
 
       <div className="relative p-6 md:p-10 lg:p-12 h-full flex flex-col">
         <div className="flex items-center justify-between mb-8">
-          <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-orange">
+          <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-blue">
             ◼ Featured · 01
           </span>
-          <span className="font-mono text-[10px] tracking-[0.2em] uppercase text-muted group-hover:text-orange transition-colors truncate max-w-[60%] text-right">
+          <span className="font-mono text-[10px] tracking-[0.2em] uppercase text-muted group-hover:text-blue transition-colors truncate max-w-[60%] text-right">
             {project.url ? displayUrl(project.url) : 'CASE STUDY'}
           </span>
         </div>
@@ -94,9 +94,9 @@ function FeaturedCard({ project }) {
               <div className="font-mono text-[10px] tracking-[0.3em] uppercase text-muted mb-2">
                 Impact
               </div>
-              <div className="font-syne text-lg md:text-2xl text-orange">{project.impact}</div>
+              <div className="font-syne text-lg md:text-2xl text-blue">{project.impact}</div>
             </div>
-            <span className="font-mono text-2xl text-muted group-hover:text-orange group-hover:translate-x-1 transition-all">
+            <span className="font-mono text-2xl text-muted group-hover:text-blue group-hover:translate-x-1 transition-all">
               ↗
             </span>
           </div>
@@ -121,7 +121,7 @@ function ProjectCard({ project, index, variant }) {
       transition={{ duration: 0.8, ease, delay: index * 0.08 }}
       className={`group relative ${
         isWide ? 'col-span-12' : 'col-span-12 lg:col-span-4 lg:row-span-2'
-      } border border-border-soft bg-surface/30 hover:bg-surface/60 hover:border-orange/40 hover:-translate-y-1 hover:shadow-[0_0_40px_rgba(244,93,0,0.12)] transition-all duration-500`}
+      } border border-border-soft bg-surface/30 hover:bg-surface/60 hover:border-blue/40 hover:-translate-y-1 hover:shadow-[0_0_40px_rgba(29, 78, 216,0.12)] transition-all duration-500`}
       data-hover
     >
       <div className="p-6 md:p-8 h-full flex flex-col">
@@ -129,7 +129,7 @@ function ProjectCard({ project, index, variant }) {
           <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-muted shrink-0">
             0{index + 1} / Project
           </span>
-          <span className="font-mono text-[10px] text-muted group-hover:text-orange transition-colors flex items-center gap-1.5 min-w-0">
+          <span className="font-mono text-[10px] text-muted group-hover:text-blue transition-colors flex items-center gap-1.5 min-w-0">
             {project.url && (
               <span className="truncate tracking-[0.15em] uppercase">{displayUrl(project.url)}</span>
             )}
@@ -137,7 +137,7 @@ function ProjectCard({ project, index, variant }) {
           </span>
         </div>
 
-        <h3 className="font-display font-semibold text-ink text-2xl md:text-3xl leading-tight mb-3 group-hover:text-orange transition-colors">
+        <h3 className="font-display font-semibold text-ink text-2xl md:text-3xl leading-tight mb-3 group-hover:text-blue transition-colors">
           {project.name}
         </h3>
 
@@ -160,7 +160,7 @@ function ProjectCard({ project, index, variant }) {
             <div className="font-mono text-[9px] tracking-[0.3em] uppercase text-muted mb-1.5">
               Impact
             </div>
-            <div className="font-syne text-base text-orange leading-snug">{project.impact}</div>
+            <div className="font-syne text-base text-blue leading-snug">{project.impact}</div>
           </div>
         </div>
       </div>
@@ -173,8 +173,8 @@ function ProjectBgSvg({ className }) {
     <svg viewBox="0 0 600 600" className={className} preserveAspectRatio="xMidYMid slice">
       <defs>
         <radialGradient id="projGlow" cx="80%" cy="20%" r="60%">
-          <stop offset="0%" stopColor="#f45d00" stopOpacity="0.25" />
-          <stop offset="100%" stopColor="#f45d00" stopOpacity="0" />
+          <stop offset="0%" stopColor="#1d4ed8" stopOpacity="0.25" />
+          <stop offset="100%" stopColor="#1d4ed8" stopOpacity="0" />
         </radialGradient>
       </defs>
       <rect width="600" height="600" fill="url(#projGlow)" />
@@ -183,7 +183,7 @@ function ProjectBgSvg({ className }) {
         <circle cx="500" cy="100" r="140" strokeDasharray="3 6" />
         <circle cx="500" cy="100" r="200" strokeDasharray="2 10" />
       </g>
-      <circle cx="500" cy="100" r="12" fill="#f45d00" />
+      <circle cx="500" cy="100" r="12" fill="#1d4ed8" />
       <g stroke="#2a2a2a" strokeWidth="1">
         <line x1="0" y1="550" x2="600" y2="550" />
         <line x1="0" y1="540" x2="600" y2="540" strokeDasharray="2 6" />

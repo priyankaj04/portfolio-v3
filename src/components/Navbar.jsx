@@ -51,16 +51,16 @@ export default function Navbar() {
     >
       {/* Scroll progress */}
       <motion.div
-        className="absolute top-0 left-0 right-0 h-px origin-left bg-orange"
+        className="absolute top-0 left-0 right-0 h-px origin-left bg-blue"
         style={{ scaleX: progress }}
       />
 
       <div className="flex items-center justify-between px-6 md:px-12 lg:px-16 py-5">
         {/* Brand */}
         <a href="#hero" className="group flex items-center gap-3" aria-label="Home">
-          <span className="relative inline-block h-3 w-3 bg-orange transition-transform duration-500 group-hover:rotate-45" />
+          <span className="relative inline-block h-3 w-3 bg-blue transition-transform duration-500 group-hover:rotate-45" />
           <span className="font-mono text-[11px] tracking-[0.32em] uppercase text-ink">
-            Priyanka<span className="text-orange">.</span>J
+            Priyanka<span className="text-blue">.</span>J
           </span>
         </a>
 
@@ -73,13 +73,13 @@ export default function Navbar() {
                 key={item.id}
                 href={`#${item.id}`}
                 className={`group relative px-3 py-2 font-mono text-[11px] tracking-[0.28em] uppercase transition-colors ${
-                  isActive ? 'text-orange' : 'text-muted hover:text-ink'
+                  isActive ? 'text-blue' : 'text-muted hover:text-ink'
                 }`}
               >
                 <span className="opacity-50 mr-1">{item.n}</span>
                 {item.label}
                 <span
-                  className={`absolute left-3 right-3 -bottom-px h-px transition-transform duration-500 origin-left bg-orange ${
+                  className={`absolute left-3 right-3 -bottom-px h-px transition-transform duration-500 origin-left bg-blue ${
                     isActive ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
                   }`}
                 />
@@ -91,10 +91,10 @@ export default function Navbar() {
         {/* Availability badge */}
         <a
           href="#contact"
-          className="group hidden sm:flex items-center gap-2 border border-border-soft hover:border-orange/60 px-3 py-2 transition-colors"
+          className="group hidden sm:flex items-center gap-2 border border-border-soft hover:border-blue/60 px-3 py-2 transition-colors"
         >
           <span className="pulse-dot inline-block h-2 w-2 bg-emerald-400" />
-          <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-ink group-hover:text-orange transition-colors">
+          <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-ink group-hover:text-blue transition-colors">
             {data.meta.availableForWork ? 'Available' : 'Booked'}
           </span>
         </a>

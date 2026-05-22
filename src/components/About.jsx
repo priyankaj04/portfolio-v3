@@ -16,7 +16,7 @@ export default function About() {
         className="pointer-events-none absolute -right-40 top-1/3 w-[520px] h-[520px] rounded-full"
         style={{
           background:
-            'radial-gradient(circle, rgba(244,93,0,0.10) 0%, rgba(244,93,0,0.02) 50%, transparent 75%)',
+            'radial-gradient(circle, rgba(29, 78, 216,0.10) 0%, rgba(29, 78, 216,0.02) 50%, transparent 75%)',
         }}
       />
 
@@ -38,14 +38,14 @@ export default function About() {
           className="col-span-12 lg:col-span-7"
         >
           <div className="font-mono text-[10px] tracking-[0.3em] uppercase text-muted mb-6">
-            <span className="text-orange">//</span> bio.md
+            <span className="text-blue">//</span> bio.md
           </div>
           <p className="font-sans text-xl md:text-3xl leading-[1.5] text-ink/85">
-            Passionate, curious developer constantly looking for problems to solve. I work at the intersection of <span className="text-orange">full stack engineering</span> and <span className="text-orange">AI</span> — building systems that scale, agents that think, and products that <span className="text-orange">matter</span>.
+            Passionate, curious developer constantly looking for problems to solve. I work at the intersection of <span className="text-blue">full stack engineering</span> and <span className="text-blue">AI</span> — building systems that scale, agents that think, and products that <span className="text-blue">matter</span>.
           </p>
 
           <div className="mt-12 flex items-center gap-4 font-mono text-[11px] tracking-[0.3em] uppercase text-muted">
-            <span className="text-orange">→</span>
+            <span className="text-blue">→</span>
             <span>Based in {data.meta.location}</span>
             <span className="block h-px flex-1 bg-border-soft" />
             <span>{new Date().getFullYear()}</span>
@@ -61,7 +61,7 @@ export default function About() {
           className="col-span-12 lg:col-span-5 lg:pl-10 lg:border-l lg:border-border-soft"
         >
           <div className="font-mono text-[10px] tracking-[0.3em] uppercase text-muted mb-8">
-            <span className="text-orange">//</span> current_focus
+            <span className="text-blue">//</span> current_focus
           </div>
           <ul className="space-y-3">
             {about.currentFocus.map((item, i) => (
@@ -71,22 +71,22 @@ export default function About() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, ease, delay: 0.2 + i * 0.1 }}
-                className="group flex items-start gap-4 py-4 border-b border-border-soft hover:border-orange/40 transition-colors"
+                className="group flex items-start gap-4 py-4 border-b border-border-soft hover:border-blue/40 transition-colors"
               >
                 <span className="font-mono text-xs text-muted pt-2">0{i + 1}</span>
                 <div className="flex-1">
-                  <span className="font-syne text-xl md:text-2xl text-ink group-hover:text-orange transition-colors">
+                  <span className="font-syne text-xl md:text-2xl text-ink group-hover:text-blue transition-colors">
                     {item}
                   </span>
                 </div>
-                <span className="font-mono text-orange opacity-0 group-hover:opacity-100 transition-opacity pt-2">→</span>
+                <span className="font-mono text-blue opacity-0 group-hover:opacity-100 transition-opacity pt-2">→</span>
               </motion.li>
             ))}
           </ul>
 
-          <div className="mt-10 inline-flex items-center gap-3 px-3 py-2 border border-orange/40 bg-orange-dim">
-            <span className="pulse-dot relative inline-flex h-2 w-2 bg-orange" />
-            <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-orange">
+          <div className="mt-10 inline-flex items-center gap-3 px-3 py-2 border border-blue/40 bg-blue-dim">
+            <span className="pulse-dot relative inline-flex h-2 w-2 bg-blue" />
+            <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-blue">
               Currently shipping
             </span>
           </div>

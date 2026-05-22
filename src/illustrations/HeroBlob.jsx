@@ -15,14 +15,14 @@ export default function HeroBlob() {
         <svg viewBox="0 0 440 440" className="w-full h-auto block">
           <defs>
             <radialGradient id="heroGlow" cx="50%" cy="50%" r="50%">
-              <stop offset="0%" stopColor="#f45d00" stopOpacity="0.55" />
-              <stop offset="40%" stopColor="#f45d00" stopOpacity="0.18" />
-              <stop offset="100%" stopColor="#f45d00" stopOpacity="0" />
+              <stop offset="0%" stopColor="#1d4ed8" stopOpacity="0.55" />
+              <stop offset="40%" stopColor="#1d4ed8" stopOpacity="0.18" />
+              <stop offset="100%" stopColor="#1d4ed8" stopOpacity="0" />
             </radialGradient>
             <linearGradient id="threadGrad" x1="0" x2="0" y1="0" y2="1">
-              <stop offset="0%" stopColor="#f45d00" stopOpacity="0" />
-              <stop offset="50%" stopColor="#f45d00" stopOpacity="0.6" />
-              <stop offset="100%" stopColor="#f45d00" stopOpacity="0" />
+              <stop offset="0%" stopColor="#1d4ed8" stopOpacity="0" />
+              <stop offset="50%" stopColor="#1d4ed8" stopOpacity="0.6" />
+              <stop offset="100%" stopColor="#1d4ed8" stopOpacity="0" />
             </linearGradient>
           </defs>
 
@@ -48,7 +48,7 @@ export default function HeroBlob() {
             style={{ transformOrigin: '220px 220px' }}
           >
             <circle cx="220" cy="220" r="180" stroke="#1f1f1f" strokeWidth="1" fill="none" strokeDasharray="2 8" />
-            <circle cx="40" cy="220" r="4" fill="#f45d00" />
+            <circle cx="40" cy="220" r="4" fill="#1d4ed8" />
             <circle cx="368" cy="100" r="3" fill="#f5f5f5" />
             <circle cx="320" cy="360" r="2.5" fill="#6b6b6b" />
           </motion.g>
@@ -61,7 +61,7 @@ export default function HeroBlob() {
           >
             <circle cx="220" cy="220" r="130" stroke="#2a2a2a" strokeWidth="1" fill="none" />
             <circle cx="350" cy="220" r="3" fill="#6b6b6b" />
-            <circle cx="220" cy="90" r="4.5" fill="#f45d00" />
+            <circle cx="220" cy="90" r="4.5" fill="#1d4ed8" />
             <circle cx="135" cy="305" r="3" fill="#f5f5f5" />
           </motion.g>
 
@@ -73,17 +73,17 @@ export default function HeroBlob() {
           >
             <circle cx="220" cy="220" r="80" stroke="#1f1f1f" strokeWidth="1" fill="none" strokeDasharray="4 4" />
             <circle cx="140" cy="220" r="3" fill="#f5f5f5" />
-            <circle cx="300" cy="220" r="3.5" fill="#f45d00" />
+            <circle cx="300" cy="220" r="3.5" fill="#1d4ed8" />
           </motion.g>
 
           {/* Core */}
-          <circle cx="220" cy="220" r="32" stroke="#f45d00" strokeWidth="1" fill="none" opacity="0.4" />
-          <circle cx="220" cy="220" r="22" stroke="#f45d00" strokeWidth="1" fill="none" opacity="0.6" />
+          <circle cx="220" cy="220" r="32" stroke="#1d4ed8" strokeWidth="1" fill="none" opacity="0.4" />
+          <circle cx="220" cy="220" r="22" stroke="#1d4ed8" strokeWidth="1" fill="none" opacity="0.6" />
           <motion.circle
             cx="220"
             cy="220"
             r="10"
-            fill="#f45d00"
+            fill="#1d4ed8"
             animate={{ scale: [1, 1.25, 1] }}
             transition={{ duration: 2.4, repeat: Infinity, ease: 'easeInOut' }}
             style={{ transformOrigin: '220px 220px' }}
