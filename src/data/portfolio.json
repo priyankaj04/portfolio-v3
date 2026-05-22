@@ -11,7 +11,6 @@
   },
 
   "about": {
-    "bio": "Passionate, curious developer constantly looking for problems to solve. I work at the intersection of full stack engineering and AI — building systems that scale, agents that think, and products that matter.",
     "currentFocus": ["AI Engineering", "Full Stack Development", "Founder"]
   },
 
@@ -23,113 +22,200 @@
 
   "timeline": [
     {
-      "id": 1,
-      "year": "Oct 2022",
-      "title": "First Real Mission",
-      "description": "Joined Circle Health as an intern. Dove into Node.js, React, PostgreSQL — and real-world healthcare tech.",
-      "type": "work",
-      "accent": "white"
-    },
-    {
-      "id": 2,
-      "year": "Sep 2023",
-      "title": "Founding Engineer",
-      "description": "Went full-time at Circle Health as a Founding Engineer. Bigger scope, bigger problems.",
-      "type": "work",
-      "accent": "white"
-    },
-    {
-      "id": 3,
-      "year": "2025",
-      "title": "Back to School (Again)",
-      "description": "Started MCA at VIT online. Leveling up theory while shipping in production.",
+      "id": "bca",
+      "year": "2020 — 2023",
+      "title": "BCA Foundations",
+      "description": "Started with computer science fundamentals — algorithms, OS, networks, databases. Three years laying the groundwork before touching production.",
       "type": "education",
-      "accent": "white"
+      "details": {
+        "institute": "BMS College for Women",
+        "status": "Completed"
+      }
     },
     {
-      "id": 4,
-      "year": "Sep 2025",
+      "id": "circle",
+      "year": "Oct 2022 — Present",
+      "title": "Founding Engineer",
+      "description": "Patient apps, AI care management, partner integrations, and HIPAA-grade infrastructure — the platform powering modern primary care from intake to outcomes.",
+      "type": "work",
+      "details": {
+        "company": "Circle Health",
+        "role": "Founding Engineer",
+        "url": "https://www.circle.healthcare/india/",
+        "tagline": "The operating system for primary care.",
+        "brand": "CIRCLE HEALTH",
+        "stats": [
+          {
+            "label": "Care Efficiency",
+            "value": "15× faster",
+            "detail": "Medical AI agent automates booking, vitals review, prescriptions, care plans, and care-gap detection — single-handedly running care management."
+          },
+          {
+            "label": "Standard",
+            "value": "HIPAA-grade",
+            "detail": "US healthcare compliance and security architecture wired into every layer of the stack — patient data protected by design."
+          },
+          {
+            "label": "Scope",
+            "value": "Multi-channel",
+            "detail": "Customer app, WhatsApp, and partner APIs — patients meet care wherever they already are, no separate workflow required."
+          }
+        ],
+        "features": [
+          {
+            "name": "Medical AI Agent",
+            "description": "AI care manager that books consultations, reviews vitals, generates prescriptions, drafts care plans, and surfaces care gaps autonomously — 15× care manager efficiency, 30% more billing."
+          },
+          {
+            "name": "Customer App",
+            "description": "Patient-facing engagement layer driving sustained daily interaction — 40% increase in platform users, averaging 1 hour per user per month."
+          },
+          {
+            "name": "WhatsApp Chatbot",
+            "description": "Conversational consultation booking. Patients schedule, reschedule, and prep for care without leaving WhatsApp — 30% increase in bookings."
+          },
+          {
+            "name": "Partner Integrations",
+            "description": "API connectors and data pipelines expanding the platform across the US healthcare ecosystem — 30% growth in US business."
+          }
+        ]
+      }
+    },
+    {
+      "id": "mca",
+      "year": "2025 — 2027",
+      "title": "Back to School (Again)",
+      "description": "Started MCA at VIT online. Leveling up theory while shipping in production — a feedback loop where each side sharpens the other.",
+      "type": "education",
+      "details": {
+        "institute": "Vellore Institute of Technology — Online",
+        "status": "Ongoing"
+      }
+    },
+    {
+      "id": "ferronyx",
+      "year": "Sep 2025 — 8 months",
       "title": "Built a Company",
-      "description": "Co-founded Ferronyx — a robotics fleet observability platform. Flask, React, Claude API, LangChain, LangGraph. 8 months of solid engineering and big lessons.",
+      "description": "Real-time ROS2 observability, AI-assisted root cause analysis, and fleet-wide diagnostics — the platform for teams running autonomous machines that cannot afford to be offline.",
       "type": "startup",
-      "accent": "orange"
+      "accent": "orange",
+      "details": {
+        "company": "Ferronyx",
+        "role": "Co-founder",
+        "url": "https://ferronyx.com/",
+        "tagline": "The intelligence layer for robotics.",
+        "brand": "FERRONYX",
+        "stats": [
+          {
+            "label": "Robot MTTR",
+            "value": "Hours → Minutes",
+            "detail": "Diagnose and recover from fleet-wide incidents before the next shift starts."
+          },
+          {
+            "label": "Platform",
+            "value": "Native ROS2",
+            "detail": "Built on the middleware the industry actually runs. No translation layer, no lossy bridge."
+          },
+          {
+            "label": "Scope",
+            "value": "Fleet-wide",
+            "detail": "One pane across every robot, every node, every topic — from lab bench to production floor."
+          }
+        ],
+        "features": [
+          {
+            "name": "Real-time Observability",
+            "description": "Live topic graphs, node health, message rates, and QoS diagnostics streamed across the fleet."
+          },
+          {
+            "name": "AI-assisted RCA",
+            "description": "Autonomous correlation across nodes, transforms, and sensor streams — the agent tells you why the robot stopped, not just that it did."
+          },
+          {
+            "name": "Fleet Diagnostics",
+            "description": "Cross-vehicle pattern detection. Firmware regressions and hardware-cohort drift surface at the fleet level before they surface at the robot level."
+          },
+          {
+            "name": "Anywhere Access",
+            "description": "Debug a robot in the field from a laptop. Remote triage without a VPN dance, without a bridge, without flying an engineer out."
+          }
+        ],
+        "terminal": [
+          { "type": "command", "text": "ros2 topic list" },
+          { "type": "output", "text": "/camera/image_raw" },
+          { "type": "output", "text": "/odom" },
+          { "type": "output", "text": "/scan" },
+          { "type": "output", "text": "/cmd_vel" },
+          { "type": "command", "text": "ros2 topic hz /scan" },
+          { "type": "output", "text": "average rate: 30.012", "cursor": true }
+        ]
+      }
     },
     {
-      "id": 5,
+  "id": "sre",
+  "year": "2025",
+  "title": "Open Source",
+  "description": "On the side, I built and open-sourced a production-grade SRE platform — full-stack site reliability tooling any team can self-host and deploy for free.",
+  "type": "opensource",
+  "details": {
+    "project": "SRE Platform",
+    "role": "Creator & Maintainer",
+    "url": "https://github.com/Ferronyx/SRE-System",
+    "tagline": "Production-grade site reliability, free for any team.",
+    "brand": "SRE PLATFORM",
+    "stats": [
+      {
+        "label": "Deployment",
+        "value": "Self-hosted",
+        "detail": "Fully containerised stack — any team can clone, configure, and run production-grade SRE tooling on their own infrastructure at zero cost."
+      },
+      {
+        "label": "Intelligence",
+        "value": "AI-powered",
+        "detail": "Anomaly detection and AI healing recommendations surface the root cause and suggest fixes before incidents escalate."
+      },
+      {
+        "label": "Response",
+        "value": "Auto-healing",
+        "detail": "A background daemon monitors system health and executes remediation actions autonomously — reducing manual on-call toil to near zero."
+      }
+    ],
+    "features": [
+      {
+        "name": "AWS Monitoring",
+        "description": "Deep integration with AWS services — tracks resource health, latency, error rates, and infrastructure metrics in real time across the entire stack."
+      },
+      {
+        "name": "Slack Alerts",
+        "description": "Intelligent alerting piped directly into Slack — incidents surface instantly with context, severity, and suggested next steps, no dashboard-watching required."
+      },
+      {
+        "name": "Status Page",
+        "description": "Public-facing status page auto-updated from live monitoring data — keeps users informed during incidents without manual updates."
+      },
+      {
+        "name": "Anomaly Detection",
+        "description": "Statistical anomaly detection over time-series metrics — catches degradations and outliers before they cross hard alert thresholds."
+      },
+      {
+        "name": "AI Healing Recommendations",
+        "description": "AI layer that analyses incident context and system state to recommend targeted remediation steps — turns raw alerts into actionable fixes."
+      },
+      {
+        "name": "Auto-Healing Daemon",
+        "description": "Always-on background daemon that watches for known failure patterns and executes pre-defined recovery actions automatically — self-healing infrastructure out of the box."
+      }
+    ],
+    "tech": ["Node.js", "React", "PostgreSQL", "Redis", "AWS", "Sentry"]
+  }
+},
+    {
+      "id": "now",
       "year": "Now",
       "title": "Still Building",
-      "description": "Full stack. AI. Always solving something. The story continues.",
+      "description": "Full stack. AI. Always solving something. The story continues — and the next chapter is being written in commits.",
       "type": "current",
       "accent": "orange"
-    }
-  ],
-
-  "experience": [
-    {
-      "company": "Circle Health",
-      "role": "Founding Engineer",
-      "period": "Oct 2022 — Present",
-      "type": "full-time",
-      "highlights": [
-        "Major backend contributor — architected and built core services powering the platform",
-        "Owned end-to-end production deployments — from local dev to live infrastructure",
-        "Led multiple projects single-handedly, from spec to ship",
-        "Customer app — 40% increase in platform users, avg 1 hr/user/month",
-        "WhatsApp chatbot — 30% increase in consultation bookings",
-        "Partner integrations expanding US business by 30%",
-        "Medical AI Agent — books consultations, reviews vitals, generates prescriptions, creates care plans, identifies care gaps — 15x care manager efficiency, 30% more billing",
-        "US healthcare compliance (HIPAA), security architecture, system protection"
-      ]
-    },
-    {
-      "company": "Ferronyx",
-      "role": "Co-founder",
-      "period": "Sep 2025 — 8 months",
-      "type": "startup",
-      "highlights": [
-        "Built a robotics fleet observability platform end-to-end from scratch",
-        "Stack: Flask, React, Claude API, LangChain, LangGraph",
-        "RAG applications, AI agents, anomaly detection on ROS2 data",
-        "Shutdown after 8 months — the engineering was solid, the lessons were invaluable"
-      ]
-    }
-  ],
-
-  "projects": [
-    {
-      "name": "Medical AI Agent",
-      "description": "AI agent for care managers that books consultations, schedules calls, reviews vitals, generates prescriptions, creates care plans, and identifies care gaps.",
-      "tech": ["Node.js", "LangGraph", "PostgreSQL", "React"],
-      "impact": "15x care manager efficiency · 30% more billing"
-    },
-    {
-      "name": "SRE Platform",
-      "description": "Full-stack site reliability platform — AWS monitoring, Slack alerts, status page, anomaly detection, AI healing recommendations, and an auto-healing daemon.",
-      "tech": ["Node.js", "React", "PostgreSQL", "Redis", "AWS", "Sentry"],
-      "impact": "Production-grade SRE system, built from zero",
-      "url": "https://github.com/Ferronyx/SRE-System"
-    },
-    {
-      "name": "Ferronyx Platform",
-      "description": "Robotic fleet observability platform with real-time monitoring, RAG-based runbook generation, and LLM-powered diagnostics on ROS2 data.",
-      "tech": ["Flask", "React", "Claude API", "LangChain", "LangGraph"],
-      "impact": "Shipped end-to-end. Solid engineering, big lessons.",
-      "url": "https://ferronyx.com/"
-    }
-  ],
-
-  "education": [
-    {
-      "degree": "MCA",
-      "institute": "Vellore Institute of Technology — Online",
-      "period": "2025 — 2027",
-      "status": "Ongoing"
-    },
-    {
-      "degree": "BCA",
-      "institute": "BMS College for Women",
-      "period": "2020 — 2023",
-      "status": "Completed"
     }
   ]
 }

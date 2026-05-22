@@ -5,10 +5,7 @@ import data from '../data/portfolio.json';
 const NAV = [
   { id: 'timeline', label: 'Story', n: '02' },
   { id: 'skills', label: 'Skills', n: '03' },
-  { id: 'experience', label: 'Work', n: '04' },
-  { id: 'projects', label: 'Projects', n: '05' },
-  { id: 'education', label: 'Education', n: '06' },
-  { id: 'contact', label: 'Contact', n: '07' },
+  { id: 'contact', label: 'Contact', n: '04' },
 ];
 
 export default function Navbar() {

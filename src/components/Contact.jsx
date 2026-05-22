@@ -60,7 +60,7 @@ export default function Contact() {
       />
 
       <SectionHeader
-        index="07"
+        index="04"
         label="Contact"
         title="Let's build something."
         meta="Open inbox"
