@@ -104,33 +104,6 @@
             "impact": "Self-serve analytics",
             "stack": ["RAG", "Vertex AI", "Gemini", "PostgreSQL"]
           }
-        ],
-        "otherShippedWork": [
-          {
-            "name": "APCM Microservice",
-            "summary": "REST APIs, WebSockets, Redis workers, LLM pipelines, and voice AI — a self-contained service for advanced primary care management billing.",
-            "metric": "Production microservice"
-          },
-          {
-            "name": "HIPAA-compliant Telehealth",
-            "summary": "Encrypted video consultations on Agora SDK with compliance-focused engineering across the call lifecycle.",
-            "metric": "HIPAA-grade"
-          },
-          {
-            "name": "React Native Rewrite",
-            "summary": "Migrated mobile app to Expo with CodePush — release cycle collapsed from 2 weeks to 3 days.",
-            "metric": "2 wk → 3 d releases"
-          },
-          {
-            "name": "Medicare Billing Modules",
-            "summary": "CCM, RPM, BHI, and APCM reimbursement automation — the financial engine behind every care touchpoint.",
-            "metric": "Billing automation"
-          },
-          {
-            "name": "AWS-native Status Page",
-            "summary": "Real-time health visibility built on CloudWatch, Route53, Lambda, and S3 — no third-party status service required.",
-            "metric": "Real-time visibility"
-          }
         ]
       }
     },

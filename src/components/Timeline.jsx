@@ -280,7 +280,7 @@ function ChapterDetails({ type, details }) {
 
       {/* Stats trio (case-study) */}
       {details.stats && details.stats.length > 0 && (
-        <div className="pt-6 border-t border-border-soft">
+        <div className="pt-6 border-t border-border-soft py-0 my-0">
           <StatsTrio stats={details.stats} />
         </div>
       )}
@@ -293,7 +293,7 @@ function ChapterDetails({ type, details }) {
             <span className="block h-px flex-1 max-w-12 bg-border-soft" />
             <span>{String(details.features.length).padStart(2, '0')} of {String(details.features.length).padStart(2, '0')}</span>
           </div>
-          <div className="grid gap-4 md:grid-cols-2">
+          <div className="gap-3">
             {details.features.map((f, fi) => (
               <motion.div
                 key={f.name}
@@ -301,15 +301,20 @@ function ChapterDetails({ type, details }) {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, ease, delay: 0.05 + fi * 0.06 }}
-                className="group/f relative border border-border-soft bg-bg/40 hover:border-orange/40 hover:bg-bg/70 transition-all duration-500 p-6"
+                className={`group/f relative  border-border-soft p-6 hover:border-orange/40 transition-colors duration-500 ${fi === 0 ? 'border-none' : 'border-t'}`}
               >
-                <div className="font-mono text-[12px] tracking-[0.3em] text-orange mb-3">
-                  /{String(fi + 1).padStart(2, '0')}
+                <div className="font-mono text-[10px] tracking-[0.3em] uppercase text-muted mb-5">
+                  <span className="text-orange">{String(fi + 1).padStart(2, '0')}</span>
+                  <span className="text-border-soft">/</span>
+                  <span>Feature</span>
                 </div>
-                <h4 className="font-syne text-xl md:text-2xl font-semibold text-ink group-hover/f:text-orange transition-colors leading-tight mb-3">
+                <h4
+                  className="font-display font-semibold text-ink leading-[1.05] mb-4"
+                  style={{ fontSize: 'clamp(22px, 2.6vw, 30px)' }}
+                >
                   {f.name}
                 </h4>
-                <p className="font-sans text-sm md:text-base text-ink/70 leading-relaxed">
+                <p className="font-sans text-sm text-ink/65 leading-relaxed">
                   {f.description}
                 </p>
               </motion.div>
@@ -393,7 +398,7 @@ function ChapterDetails({ type, details }) {
             <span className="block h-px flex-1 max-w-12 bg-border-soft" />
             <span>{String(details.otherShippedWork.length).padStart(2, '0')} shipped</span>
           </div>
-          <div className="grid gap-3 md:grid-cols-2">
+          <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-3">
             {details.otherShippedWork.map((w, wi) => (
               <motion.div
                 key={w.name}
@@ -401,15 +406,15 @@ function ChapterDetails({ type, details }) {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, ease, delay: 0.04 + wi * 0.04 }}
-                className="border border-border-soft bg-bg/30 p-5 hover:border-orange/30 hover:bg-bg/50 transition-all duration-500"
+                className="border border-border-soft p-5 hover:border-orange/40 transition-colors duration-500"
               >
-                <div className="flex items-start justify-between gap-3 mb-2">
-                  <h5 className="font-syne text-base md:text-lg font-semibold text-ink leading-tight">
-                    {w.name}
-                  </h5>
-                  <span className="font-mono text-[9px] tracking-[0.3em] uppercase text-orange whitespace-nowrap pt-1">
-                    {w.metric}
-                  </span>
+                <div className="font-mono text-[10px] tracking-[0.3em] uppercase text-muted mb-4">
+                  <span className="text-orange">{String(wi + 1).padStart(2, '0')}</span>
+                  <span className="text-border-soft">/</span>
+                  <span>{w.name}</span>
+                </div>
+                <div className="font-syne text-base md:text-lg text-orange leading-tight mb-3">
+                  {w.metric}
                 </div>
                 <p className="font-sans text-sm text-ink/65 leading-relaxed">
                   {w.summary}
@@ -457,7 +462,7 @@ function displayUrl(url) {
 
 function StatsTrio({ stats }) {
   return (
-    <div className="grid gap-3 md:grid-cols-3">
+    <div className="grid gap-x-3 md:grid-cols-3 my-0 py-0">
       {stats.map((s, i) => (
         <motion.div
           key={s.label}
@@ -465,21 +470,20 @@ function StatsTrio({ stats }) {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, ease, delay: 0.05 + i * 0.08 }}
-          className="group/s relative border border-border-soft bg-bg/40 hover:border-orange/40 hover:bg-bg/70 transition-all duration-500 p-6"
+          className={`group/s relative border-border-soft px-6 hover:border-orange/40 transition-colors duration-500 ${i === 0 ? 'border-none' : 'border-l'}`}
         >
-          <div className="font-mono text-[10px] tracking-[0.3em] uppercase text-muted mb-4">
+          <div className="font-mono text-[10px] tracking-[0.3em] uppercase text-muted mb-5">
             <span className="text-orange">{String(i + 1).padStart(2, '0')}</span>
-            <span className="mx-2 text-border-soft">/</span>
+            <span className="text-border-soft">/</span>
             <span>{s.label}</span>
           </div>
           <div
-            className="font-display font-semibold text-ink group-hover/s:text-orange transition-colors leading-[1.05] mb-4"
+            className="font-display font-semibold text-ink leading-[1.05] mb-4"
             style={{ fontSize: 'clamp(24px, 3.2vw, 38px)' }}
           >
             {s.value}
           </div>
-          <div className="h-px w-8 bg-orange mb-3" />
-          <p className="font-sans text-sm text-ink/70 leading-relaxed">
+          <p className="font-sans text-sm text-ink/65 leading-relaxed">
             {s.detail}
           </p>
         </motion.div>
