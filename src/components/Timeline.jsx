@@ -1,4 +1,5 @@
 import { useRef } from 'react';
+import { Link } from 'react-router-dom';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import data from '../data/portfolio.json';
 import SectionHeader from './SectionHeader.jsx';
@@ -310,6 +311,108 @@ function ChapterDetails({ type, details }) {
                 </h4>
                 <p className="font-sans text-sm md:text-base text-ink/70 leading-relaxed">
                   {f.description}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Featured Projects — linked case studies */}
+      {details.featuredProjects && details.featuredProjects.length > 0 && (
+        <div className="pt-6 border-t border-border-soft">
+          <div className="flex items-center gap-3 mb-5 font-mono text-[10px] tracking-[0.3em] uppercase text-muted">
+            <span>// featured projects</span>
+            <span className="block h-px flex-1 max-w-12 bg-border-soft" />
+            <span>{String(details.featuredProjects.length).padStart(2, '0')} case studies</span>
+          </div>
+          <div className="grid gap-4 md:grid-cols-2">
+            {details.featuredProjects.map((fp, fpi) => (
+              <motion.div
+                key={fp.slug}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, ease, delay: 0.05 + fpi * 0.06 }}
+              >
+                <Link
+                  to={`/projects/${fp.slug}`}
+                  className="group/fp relative block border border-border-soft bg-bg/40 hover:border-orange/60 hover:bg-bg/70 transition-all duration-500 p-5 overflow-hidden h-full"
+                >
+                  <ProjectBg />
+                  <div className="relative">
+                    <div className="flex items-start justify-between gap-3 mb-3">
+                      <h4 className="font-syne text-lg md:text-xl font-semibold text-ink group-hover/fp:text-orange transition-colors leading-tight">
+                        {fp.name}
+                      </h4>
+                      <span className="font-mono text-base text-muted group-hover/fp:text-orange group-hover/fp:translate-x-0.5 transition-all flex-shrink-0">
+                        →
+                      </span>
+                    </div>
+                    <p className="font-sans text-sm text-ink/70 leading-relaxed mb-4">
+                      {fp.oneLiner}
+                    </p>
+                    {fp.stack && fp.stack.length > 0 && (
+                      <div className="flex flex-wrap gap-1.5 mb-4">
+                        {fp.stack.map((t) => (
+                          <span
+                            key={t}
+                            className="font-mono text-[9px] tracking-widest uppercase px-2 py-0.5 border border-line text-muted rounded-full"
+                          >
+                            {t}
+                          </span>
+                        ))}
+                      </div>
+                    )}
+                    <div className="pt-3 border-t border-border-soft flex items-center justify-between gap-3">
+                      <div>
+                        <div className="font-mono text-[9px] tracking-[0.3em] uppercase text-muted mb-1">
+                          Impact
+                        </div>
+                        <div className="font-syne text-sm md:text-base text-orange leading-snug">
+                          {fp.impact}
+                        </div>
+                      </div>
+                      <span className="font-mono text-[9px] tracking-[0.3em] uppercase text-orange/70 group-hover/fp:text-orange transition-colors">
+                        Case study →
+                      </span>
+                    </div>
+                  </div>
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Other Shipped Work — static cards */}
+      {details.otherShippedWork && details.otherShippedWork.length > 0 && (
+        <div className="pt-6 border-t border-border-soft">
+          <div className="flex items-center gap-3 mb-5 font-mono text-[10px] tracking-[0.3em] uppercase text-muted">
+            <span>// other shipped work</span>
+            <span className="block h-px flex-1 max-w-12 bg-border-soft" />
+            <span>{String(details.otherShippedWork.length).padStart(2, '0')} shipped</span>
+          </div>
+          <div className="grid gap-3 md:grid-cols-2">
+            {details.otherShippedWork.map((w, wi) => (
+              <motion.div
+                key={w.name}
+                initial={{ opacity: 0, y: 12 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, ease, delay: 0.04 + wi * 0.04 }}
+                className="border border-border-soft bg-bg/30 p-5 hover:border-orange/30 hover:bg-bg/50 transition-all duration-500"
+              >
+                <div className="flex items-start justify-between gap-3 mb-2">
+                  <h5 className="font-syne text-base md:text-lg font-semibold text-ink leading-tight">
+                    {w.name}
+                  </h5>
+                  <span className="font-mono text-[9px] tracking-[0.3em] uppercase text-orange whitespace-nowrap pt-1">
+                    {w.metric}
+                  </span>
+                </div>
+                <p className="font-sans text-sm text-ink/65 leading-relaxed">
+                  {w.summary}
                 </p>
               </motion.div>
             ))}

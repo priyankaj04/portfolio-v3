@@ -7,9 +7,10 @@ import SkillOrbs from '../illustrations/SkillOrbs.jsx';
 const ease = [0.16, 1, 0.3, 1];
 
 const GROUPS = [
-  { key: 'fullstack', n: '01', label: 'Full Stack' },
-  { key: 'ai', n: '02', label: 'AI / ML' },
-  { key: 'tools', n: '03', label: 'Tools & Frameworks' },
+  { key: 'ai', n: '01', label: 'AI / ML' },
+  { key: 'fullstack', n: '02', label: 'Full Stack' },
+  { key: 'infrastructure', n: '03', label: 'Infrastructure' },
+  { key: 'domain', n: '04', label: 'Domain' },
 ];
 
 export default function Skills() {
@@ -25,7 +26,7 @@ export default function Skills() {
         index="03"
         label="Stack"
         title="Tools of the trade."
-        meta="3 groups · 17 weapons"
+        meta={`${GROUPS.length} groups · ${GROUPS.reduce((n, g) => n + (skills[g.key]?.length || 0), 0)} weapons`}
         accent="What I reach for"
       />
 

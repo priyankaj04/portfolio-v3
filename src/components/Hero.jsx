@@ -99,19 +99,33 @@ export default function Hero() {
               </span>
             </motion.div>
 
-            {/* Bio */}
+            {/* Positioning */}
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9, ease, delay: 0.6 }}
-              className="mt-8 max-w-xl font-sans text-lg md:text-xl leading-[1.55] text-ink/80"
+              className="mt-8 max-w-2xl font-display font-semibold text-ink leading-[1.1] tracking-tight"
+              style={{ fontSize: 'clamp(22px, 2.6vw, 32px)' }}
             >
-              Passionate, curious developer constantly looking for problems to solve.
-              I work at the intersection of{' '}
-              <span className="text-orange">full stack engineering</span> and{' '}
-              <span className="text-orange">AI</span> — building systems that scale,
-              agents that think, and products that <span className="text-orange">matter</span>.
+              {meta.subtitle}
             </motion.p>
+
+            {/* Credentials strip */}
+            {meta.credentials && meta.credentials.length > 0 && (
+              <motion.div
+                initial={{ opacity: 0, y: 16 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.9, ease, delay: 0.7 }}
+                className="mt-6 flex flex-wrap items-center gap-x-3 gap-y-2 font-mono text-[11px] tracking-[0.28em] uppercase text-muted"
+              >
+                {meta.credentials.map((c, i) => (
+                  <span key={c} className="flex items-center gap-3">
+                    {i > 0 && <span className="text-border-soft">·</span>}
+                    <span className={i === 0 ? 'text-orange' : 'text-ink/85'}>{c}</span>
+                  </span>
+                ))}
+              </motion.div>
+            )}
 
             {/* CTAs */}
             <motion.div
@@ -121,7 +135,7 @@ export default function Hero() {
               className="mt-10 flex flex-wrap gap-3"
             >
               <a
-                href="#projects"
+                href="#timeline"
                 className="group inline-flex items-center gap-3 px-6 py-4 bg-orange text-bg font-syne text-xs md:text-sm tracking-[0.28em] uppercase font-semibold transition-all hover:bg-ink hover:shadow-[0_0_40px_rgba(244,93,0,0.35)]"
               >
                 View work
