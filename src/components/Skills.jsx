@@ -10,7 +10,6 @@ const GROUPS = [
   { key: 'ai', n: '01', label: 'AI / ML' },
   { key: 'fullstack', n: '02', label: 'Full Stack' },
   { key: 'infrastructure', n: '03', label: 'Infrastructure' },
-  { key: 'domain', n: '04', label: 'Domain' },
 ];
 
 export default function Skills() {
