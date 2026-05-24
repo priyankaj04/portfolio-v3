@@ -3,7 +3,7 @@
     "name": "Priyanka J",
     "title": "Founding Engineer & AI Engineer",
     "tagline": "I build things that make life a little easier — one commit at a time.",
-    "subtitle": "Founding Engineer & AI Engineer building scalable healthcare and robotics systems.",
+    "subtitle": "Applied AI & Full-Stack Engineer building scalable healthcare and SaaS solutions.",
     "credentials": ["3.5+ yrs", "Circle Health", "Ferronyx", "Bengaluru"],
     "location": "Bengaluru, India",
     "email": "priyankajagadeesha10@gmail.com",
@@ -18,10 +18,9 @@
   },
 
   "skills": {
-    "ai": ["RAG Applications", "AI Agents", "LangGraph", "LangChain", "Vertex AI", "Gemini", "Fine Tuning", "Inferencing", "Prompt Engineering", "Context Tokenization"],
-    "fullstack": ["Node.js", "React", "Next.js", "React Native", "Expo", "Express.js", "Flask"],
-    "infrastructure": ["AWS", "Docker", "PostgreSQL", "Redis", "Nginx", "WebSockets", "Microservices", "CI/CD", "CodePush"],
-    "domain": ["HIPAA Compliance", "Medicare Billing", "ROS2", "Agora SDK", "Healthcare Systems"]
+    "ai": ["RAG Applications", "AI Agents", "LangGraph", "Fine Tuning", "Inferencing", "Prompt Engineering", "Context Tokenization"],
+    "fullstack": ["Node.js", "React", "Next.js", "React Native", "Flask"],
+    "infrastructure": ["AWS", "Docker", "PostgreSQL", "Redis", "Nginx", "WebSockets", "CI/CD"]
   },
 
   "timeline": [
