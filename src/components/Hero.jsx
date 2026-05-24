@@ -148,6 +148,17 @@ export default function Hero() {
                 Get in touch
                 <span className="transition-transform duration-300 group-hover:translate-x-1">↗</span>
               </a>
+              {meta.resume && (
+                <a
+                  href={meta.resume}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group inline-flex items-center gap-3 px-6 py-4 border border-border-soft text-ink font-syne text-xs md:text-sm tracking-[0.28em] uppercase font-semibold transition-all hover:border-orange hover:text-orange"
+                >
+                  Resume
+                  <span className="transition-transform duration-300 group-hover:translate-x-1">↗</span>
+                </a>
+              )}
             </motion.div>
           </div>
 
