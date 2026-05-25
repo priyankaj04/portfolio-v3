@@ -1,0 +1,260 @@
+# Priyanka J
+
+> Founding Engineer & AI Engineer — Applied AI & Full-Stack Engineer building scalable healthcare and SaaS solutions. "I build things that make life a little easier — one commit at a time."
+
+- **Name:** Priyanka J
+- **Title:** Founding Engineer & AI Engineer
+- **Experience:** 3.5+ years
+- **Location:** Bengaluru, India
+- **Email:** priyankajagadeesha10@gmail.com
+- **GitHub:** https://github.com/priyankaj04
+- **LinkedIn:** https://www.linkedin.com/in/priyankaj04/
+- **Resume:** https://drive.google.com/file/d/1gR-0mGRi_FlHZQpexMzK9gwQ7Exkuw5I/view?usp=sharing
+- **Available for work:** Yes
+- **Current companies:** Circle Health, Ferronyx
+
+## Current Focus
+
+- Applied AI Engineering
+- Founding Engineer
+- Full-Stack Development
+
+## Skills
+
+### AI / ML
+RAG Applications, AI Agents, LangGraph, Fine Tuning, Inferencing, Prompt Engineering, Context Tokenization
+
+### Full-Stack
+Node.js, React, Next.js, React Native, Flask
+
+### Infrastructure
+AWS, Docker, PostgreSQL, Redis, Nginx, WebSockets, CI/CD
+
+---
+
+## Timeline
+
+### BCA Foundations (2020 — 2023)
+**Type:** Education | **Institute:** BMS College for Women | **Status:** Completed
+
+Started with computer science fundamentals — algorithms, OS, networks, databases. Three years laying the groundwork before touching production.
+
+### Founding Engineer at Circle Health (Oct 2022 — Present)
+**Type:** Work | **Role:** Founding Engineer | **URL:** https://www.circle.healthcare/india/
+**Tagline:** The operating system for primary care.
+
+Patient apps, AI care management, partner integrations, and HIPAA-grade infrastructure — the platform powering modern primary care from intake to outcomes.
+
+**Key Stats:**
+- **Traffic Growth — 5× scale:** Engineered the backend systems that supported 5× traffic growth across the Philippines and U.S. markets without re-architecting under load.
+- **Care Efficiency — 10× throughput:** Medical AI agent automates booking, vitals review, prescriptions, care plans, and care-gap detection — single-handedly running care management.
+- **Standard — HIPAA-grade:** US healthcare compliance and security architecture wired into every layer of the stack — patient data protected by design.
+
+**Features Built:**
+- **Medical AI Agent:** AI care manager that books consultations, reviews vitals, generates prescriptions, drafts care plans, and surfaces care gaps autonomously — 10× care manager throughput, 30% more billing.
+- **Customer App:** Patient-facing engagement layer driving sustained daily interaction — 40% increase in platform users, averaging 1 hour per user per month.
+- **WhatsApp Chatbot:** Conversational consultation booking. Patients schedule, reschedule, and prep for care without leaving WhatsApp — 30% increase in bookings.
+- **Partner Integrations:** API connectors and data pipelines expanding the platform across the US healthcare ecosystem — 30% growth in US business.
+
+### MCA at VIT Online (2025 — 2027)
+**Type:** Education | **Institute:** Vellore Institute of Technology — Online | **Status:** Ongoing
+
+Started MCA at VIT online. Leveling up theory while shipping in production — a feedback loop where each side sharpens the other.
+
+### Co-founder & AI Engineer at Ferronyx (June 2025 — Present)
+**Type:** Startup | **Role:** Co-founder & AI Engineer | **URL:** https://ferronyx.com/
+**Tagline:** The intelligence layer for robotics.
+
+Real-time ROS2 observability, AI-assisted root cause analysis, and fleet-wide diagnostics — the platform for teams running autonomous machines that cannot afford to be offline.
+
+**Key Stats:**
+- **Robot MTTR — Hours → Minutes:** Diagnose and recover from fleet-wide incidents before the next shift starts.
+- **Platform — Native ROS2:** Built on the middleware the industry actually runs. No translation layer, no lossy bridge.
+- **Scope — Fleet-wide:** One pane across every robot, every node, every topic — from lab bench to production floor.
+
+**Features Built:**
+- **Real-time Observability:** Live topic graphs, node health, message rates, and QoS diagnostics streamed across the fleet.
+- **AI-assisted RCA:** Autonomous correlation across nodes, transforms, and sensor streams — the agent tells you why the robot stopped, not just that it did.
+- **Fleet Diagnostics:** Cross-vehicle pattern detection. Firmware regressions and hardware-cohort drift surface at the fleet level before they surface at the robot level.
+- **Anywhere Access:** Debug a robot in the field from a laptop. Remote triage without a VPN dance, without a bridge, without flying an engineer out.
+
+### Open Source — SRE Platform (2025)
+**Type:** Open Source | **Role:** Creator & Maintainer | **URL:** https://github.com/Ferronyx/SRE-System
+**Tagline:** Production-grade site reliability, free for any team.
+
+On the side, I built and open-sourced a production-grade SRE platform — full-stack site reliability tooling any team can self-host and deploy for free.
+
+**Key Stats:**
+- **Deployment — Self-hosted:** Fully containerised stack — any team can clone, configure, and run production-grade SRE tooling on their own infrastructure at zero cost.
+- **Intelligence — AI-powered:** Anomaly detection and AI healing recommendations surface the root cause and suggest fixes before incidents escalate.
+- **Response — Auto-healing:** A background daemon monitors system health and executes remediation actions autonomously — reducing manual on-call toil to near zero.
+
+**Features Built:**
+- **AWS Monitoring:** Deep integration with AWS services — tracks resource health, latency, error rates, and infrastructure metrics in real time across the entire stack.
+- **Slack Alerts:** Intelligent alerting piped directly into Slack — incidents surface instantly with context, severity, and suggested next steps, no dashboard-watching required.
+- **Status Page:** Public-facing status page auto-updated from live monitoring data — keeps users informed during incidents without manual updates.
+- **Anomaly Detection:** Statistical anomaly detection over time-series metrics — catches degradations and outliers before they cross hard alert thresholds.
+- **AI Healing Recommendations:** AI layer that analyses incident context and system state to recommend targeted remediation steps — turns raw alerts into actionable fixes.
+- **Auto-Healing Daemon:** Always-on background daemon that watches for known failure patterns and executes pre-defined recovery actions automatically — self-healing infrastructure out of the box.
+
+**Tech:** Node.js, React, PostgreSQL, Redis, AWS, Sentry
+
+### Now — Still Building
+Full stack. AI. Always solving something. The story continues — and the next chapter is being written in commits.
+
+---
+
+## Featured Projects
+
+### 1. AI Care Automation Agent
+**Company:** Circle Health | **Role:** Founding Engineer | **Year:** 2022 — Present
+**One-liner:** An LLM-driven care manager that books, reviews, prescribes, plans, and surfaces care gaps autonomously.
+
+**Impact:**
+- 10× Care manager throughput
+- 30% More billing captured
+- Auto Care-gap detection
+
+**Problem:** Care managers were drowning in manual work: chasing patients for vitals, reviewing every reading by hand, drafting care plans from templates, and reconciling care gaps across hundreds of records. The bottleneck wasn't medicine — it was the operational machinery around it. Every hour spent on logistics was an hour not spent on a patient who needed escalation. The team needed an autonomous layer that could do the routine work end-to-end while keeping humans in the loop for clinical judgment.
+
+**Architecture:** A LangGraph-orchestrated agent fronts a set of tools — booking, vitals review, prescription drafting, care-plan generation, and care-gap detection — each backed by a domain service. Patient touchpoints land via WhatsApp webhooks and email, hit a Node.js orchestrator, queue through Redis workers for long-running tasks, and stream LLM completions back through Vertex AI. Care plans are grounded in patient history pulled from PostgreSQL; care-gap detection runs as a scheduled job that re-evaluates protocol compliance per patient and pushes actionable items back into the agent's queue.
+
+**Stack:** LangGraph, Vertex AI, Gemini, Node.js, Redis, PostgreSQL, WhatsApp Cloud API, AWS
+
+**Challenges:**
+- **Tool reliability beats model cleverness:** Early agent runs hallucinated patient context. The fix wasn't a better prompt — it was tightening the tool contracts so the model couldn't infer fields it should have looked up.
+- **Long-running workflows in a stateless chat:** Care-plan generation can take minutes; WhatsApp expects sub-second responses. Solved by queueing through Redis and posting results back as a follow-up message with the original conversation thread restored.
+- **Clinical safety guardrails:** Prescription suggestions never auto-send. Every clinical artifact routes through a human review queue with the agent's reasoning surfaced inline.
+- **Care-gap detection at scale:** Re-evaluating protocol compliance per patient is O(patients × protocols). Cut the work by indexing on last-evaluated timestamps and only re-running when underlying vitals or prescriptions change.
+
+**Key Decisions:**
+- **LangGraph over a custom orchestrator:** Tool routing, retries, and state were going to look exactly like LangGraph anyway — adopting the framework let the team focus on tool quality, not plumbing.
+- **WhatsApp as the primary channel:** Patients already lived in WhatsApp. Building a new app would have lost the engagement battle before the first message.
+- **Vertex AI / Gemini for grounded generation:** Healthcare data residency and Google's grounding tooling made Vertex the right call over a generic API for clinical text.
+
+**Impact Story:** Care managers stopped spending their day in spreadsheets and started spending it on the patients the agent flagged. Throughput jumped 10×, billing captured grew by 30%, and care-gap detection went from a quarterly manual audit to a continuous background process. The team didn't grow — the leverage did.
+
+---
+
+### 2. AI SRE Runbook Generator
+**Company:** Circle Health | **Role:** Founding Engineer | **Year:** 2022 — Present
+**One-liner:** Turns raw alerts into context-rich, actionable on-call runbooks — automatically.
+
+**Impact:**
+- MTTR ↓ Mean time to recovery
+- Auto Runbook drafting
+- 0 → 1 AI in the on-call loop
+
+**Problem:** On-call engineers were waking up to alerts that said *what* broke but not *why*, *where to look*, or *what worked last time*. Tribal knowledge lived in old Slack threads and a handful of engineers' heads. Every incident started with 20 minutes of context-gathering before any actual mitigation happened. Reducing MTTR meant collapsing that context-gathering into the alert itself.
+
+**Architecture:** When an alert fires, a webhook handler enriches it with the surrounding context — recent deploys, related logs, the last N incidents on the same service, and the service's known dependencies. The enriched payload is fed to an LLM prompt that has access to a library of past runbooks and historical fixes. The model drafts a runbook tailored to the live state of the system: probable cause, diagnostic commands to run, mitigation steps that worked previously, and a rollback path. The runbook is posted into the on-call Slack channel within seconds of the alert.
+
+**Stack:** LLM, Vertex AI, AWS CloudWatch, Sentry, Slack API, Node.js
+
+**Challenges:**
+- **Context window vs. context quality:** Stuffing every log line into the prompt produced worse runbooks than including a tight, ranked summary. Built a context-ranker that scored log lines by relevance before they entered the prompt.
+- **Hallucinated mitigations are dangerous:** Constrained the model to only suggest commands and steps that appeared in the runbook library or in past incident postmortems. No improvisation on production.
+- **Latency budget:** An incident-time runbook is useless if it arrives after the engineer has already fixed it. Trimmed the pipeline so the runbook lands in Slack within seconds of the alert.
+
+**Key Decisions:**
+- **Slack as the delivery surface:** On-call lived in Slack already. Building a new dashboard would have meant nobody saw the runbook in time.
+- **Grounded generation only:** Past runbooks and postmortems as the only legitimate sources — no creative mitigation. Safety beat cleverness.
+- **Same alert path as humans:** The AI didn't replace the alert — it rode on top of it. Engineers still got paged; they just got a head start.
+
+**Impact Story:** On-call shifted from cold-start investigation to warm-start mitigation. MTTR dropped significantly because the first 20 minutes of every incident — *where do I even look?* — were already done by the time the engineer opened Slack. The runbook also doubled as institutional memory: every incident sharpened the library for the next one.
+
+---
+
+### 3. RAG Care Plan + NL→SQL
+**Company:** Circle Health | **Role:** Founding Engineer | **Year:** 2022 — Present
+**One-liner:** RAG-personalized treatment generation plus a plain-English analytics agent over production data.
+
+**Impact:**
+- Self-serve Analytics for non-engineers
+- RAG Grounded care plans
+- Gemini Vertex AI backbone
+
+**Problem:** Two distinct problems sharing a backbone. **One**, care plans were generic — a hypertension protocol applied the same way whether the patient was 32 or 72, sedentary or active, on three meds or one. Personalization required pulling history, comorbidities, and prior care plans into the loop. **Two**, the team's data analysts were the bottleneck for every business question. *"How many patients are overdue for vitals this week?"* meant filing a SQL ticket and waiting a day. Non-technical stakeholders couldn't answer their own questions.
+
+**Architecture:** Both systems share a RAG pattern with different retrieval surfaces. The care-plan generator retrieves from a vector index of patient history, prior plans, and clinical protocols, then feeds Gemini grounded context to draft a personalized plan. The NL→SQL agent translates plain-English questions into SQL against a read-replica of the production database — guarded by a schema embedding for retrieval and a result-validation pass that reformats output into natural language. Both flows run through Vertex AI with audit logging on every query.
+
+**Stack:** RAG, Vertex AI, Gemini, PostgreSQL, Vector Index, Node.js
+
+**Challenges:**
+- **Grounding without leaking:** Care-plan retrieval had to be patient-scoped — no chance of pulling another patient's record into the context. Enforced at the retrieval layer, not the prompt layer.
+- **NL→SQL on a live schema:** Production schemas drift. Built schema embeddings as a CI artifact so the model always queried against the current shape, not a stale snapshot.
+- **Stopping unsafe queries:** The NL→SQL agent only ever issued reads, against a read replica, with a query timeout and a row-cap. No DELETE, no UPDATE, ever.
+
+**Key Decisions:**
+- **Combine RAG + NL→SQL into one stack:** Both use Vertex, both need vector retrieval, both audit logs. Shared infrastructure cut the build time roughly in half.
+- **Read replica, not primary:** Even with safeguards, a runaway query shouldn't be able to touch the primary. Cheap insurance.
+- **Natural-language output by default:** Non-engineers don't read result tables. The formatter converts rows into a sentence — and exposes the underlying SQL on demand for trust.
+
+**Impact Story:** Care plans went from template-driven to personalized without adding clinician workload. Analysts stopped being the bottleneck — stakeholders self-served the questions they used to file tickets for. The same RAG backbone supported both, which is the kind of leverage you only get when the foundation is right.
+
+---
+
+### 4. Ferronyx Robotics Observability
+**Company:** Ferronyx | **Role:** Co-founder & AI Engineer | **Year:** 2025 — Present
+**One-liner:** ROS2-native observability with a LangGraph diagnostics agent that triages, explains, and remediates.
+
+**Impact:**
+- Hours → Min Robot MTTR
+- Native ROS2, no bridge
+- Fleet Cross-vehicle visibility
+
+**Problem:** Robotics teams ship fleets and then go blind. When a robot stops in the field, the loop is: someone calls, an engineer logs in, pulls bags, replays scenarios, guesses, retries — sometimes flies out. Existing observability tools were built for web services; ROS2 fleets need real-time topic graphs, node health, transform trees, and message-rate diagnostics. The team wanted a single pane where the *why* of a failure surfaced before an engineer even started looking, and where remediation could happen remotely without a VPN dance.
+
+**Architecture:** An agent runs on each robot, streaming ROS2 telemetry — topics, nodes, message rates, QoS, transforms, sensor health — over WebSockets to a cloud control plane. A LangGraph diagnostics agent correlates streams across nodes and across the fleet, drafts a root-cause hypothesis, and proposes a remediation plan. For approved actions, the agent executes via SSH on the target robot; for everything else, it generates a runbook for the on-call human. Fleet-wide pattern detection runs as a scheduled job over historical telemetry to catch firmware regressions and hardware-cohort drift.
+
+**Stack:** LangGraph, ROS2, WebSockets, Node.js, React, PostgreSQL, Docker
+
+**Challenges:**
+- **ROS2 over the public internet:** ROS2's native discovery doesn't cross NAT cleanly. Built a lightweight agent that proxies topics over WebSockets, preserving QoS semantics without the bridging tax.
+- **Diagnostics without flooding the network:** Streaming every topic from every robot would saturate uplinks. Selective sampling and on-robot pre-aggregation cut bandwidth without losing diagnostic value.
+- **Acting on machines that move:** Remediation on a robot that's mid-task is dangerous. Every remediation step has a safety predicate ("only run when idle", "only run when stopped at base") enforced at the agent.
+
+**Key Decisions:**
+- **Native ROS2, no translation layer:** The industry runs ROS2. A bridge would have been lossy and a permanent maintenance tax. Going native made the platform trusted by robotics teams immediately.
+- **LangGraph for diagnostics:** RCA is a multi-step reasoning loop with branching tool calls — exactly the workload LangGraph is shaped for.
+- **Agent on the robot, brain in the cloud:** Edge for low-latency capture and safety, cloud for cross-fleet correlation and heavy LLM reasoning. Right tool, right tier.
+
+**Impact Story:** Teams running Ferronyx stop sending engineers to the field for triage. The diagnostics agent answers *why* before anyone has to ask. MTTR went from hours to minutes, and the same telemetry that catches a single robot's failure also surfaces firmware regressions and hardware drift across the fleet — the kind of pattern you only see when you have one pane across everything.
+
+---
+
+### 5. Open Source SRE Platform
+**Company:** Ferronyx — Open Source | **Role:** Creator & Maintainer | **Year:** 2025
+**One-liner:** Production-grade, self-hostable site reliability tooling with AI healing and auto-remediation.
+
+**Impact:**
+- Self-host Zero-cost deployment
+- AI Healing recommendations
+- Auto Background remediation
+
+**Problem:** Production-grade SRE tooling is gated behind enterprise pricing. Small teams either patch together open-source pieces (and own the integration tax) or pay vendors for capabilities they only partially use. The goal: ship a single, containerised stack with monitoring, anomaly detection, AI-assisted RCA, alerting, status pages, and an auto-healing daemon — usable on day one, free forever.
+
+**Architecture:** A containerised stack: a Node.js API and a React control plane backed by PostgreSQL for incident state and Redis for queues. Monitors pull from AWS CloudWatch and Sentry; anomaly detection runs over time-series metrics to catch issues before alert thresholds fire. An AI layer takes the incident context and proposes remediation. A background auto-healing daemon watches for known failure patterns and executes pre-defined recovery actions. Alerts pipe into Slack; a public status page is auto-generated from live state.
+
+**Stack:** Node.js, React, PostgreSQL, Redis, AWS, Sentry, Docker
+
+**Challenges:**
+- **Safe auto-remediation:** An auto-healing daemon that takes wrong actions makes things worse. Every action is pre-defined, pattern-matched, idempotent, and bounded — no improvised remediation.
+- **Self-hosting ergonomics:** Most open-source SRE stacks are setup-heavy. Shipped a single docker-compose that boots the whole platform in under five minutes.
+- **AI recommendations that are useful, not noisy:** The recommendation engine had to know when *not* to recommend — silence on a normal alert is more valuable than a generic suggestion.
+
+**Key Decisions:**
+- **Open source, no enterprise tier:** The point was unblocking small teams. A freemium model would have re-created the problem the project was solving.
+- **AWS-first integrations:** Most teams the project targets run on AWS. Shipping deep AWS integration on day one beat shallow integration with five clouds.
+- **Auto-healing as opt-in:** Trust is earned. The daemon ships off by default — teams turn on remediation actions one by one as they verify them.
+
+**Impact Story:** Teams that couldn't justify enterprise SRE tooling now run production-grade observability, anomaly detection, AI-assisted incident response, and auto-remediation on their own infrastructure at zero cost. The platform turns into institutional infrastructure the way good open source does — adopted, forked, contributed back to.
+
+---
+
+## Contact
+
+- **Email:** priyankajagadeesha10@gmail.com
+- **GitHub:** https://github.com/priyankaj04
+- **LinkedIn:** https://www.linkedin.com/in/priyankaj04/
+- **Resume:** https://drive.google.com/file/d/1gR-0mGRi_FlHZQpexMzK9gwQ7Exkuw5I/view?usp=sharing

@@ -269,7 +269,7 @@
       "oneLiner": "An LLM-driven care manager that books, reviews, prescribes, plans, and surfaces care gaps autonomously.",
       "company": "Circle Health",
       "role": "Founding Engineer",
-      "year": "2024 — Present",
+      "year": "2022 — Present",
       "impact": [
         { "metric": "10×", "label": "Care manager throughput" },
         { "metric": "30%", "label": "More billing captured" },
@@ -300,7 +300,7 @@
       "oneLiner": "Turns raw alerts into context-rich, actionable on-call runbooks — automatically.",
       "company": "Circle Health",
       "role": "Founding Engineer",
-      "year": "2024 — 2025",
+      "year": "2022 — Present",
       "impact": [
         { "metric": "MTTR ↓", "label": "Mean time to recovery" },
         { "metric": "Auto", "label": "Runbook drafting" },
@@ -330,7 +330,7 @@
       "oneLiner": "RAG-personalized treatment generation plus a plain-English analytics agent over production data.",
       "company": "Circle Health",
       "role": "Founding Engineer",
-      "year": "2024 — Present",
+      "year": "2022 — Present",
       "impact": [
         { "metric": "Self-serve", "label": "Analytics for non-engineers" },
         { "metric": "RAG", "label": "Grounded care plans" },
